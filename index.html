@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bitácora Digital — Portafolio de Evidencias</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============================================================
+       LAYOUT GENERAL: menú lateral fijo + área de contenido.
+       Consistencia y estándares (Nielsen): la navegación permanece
+       siempre en el mismo lugar, facilitando recorrer el sistema.
+       ============================================================ -->
+  <div class="app-shell">
+
+    <!-- ===== MENÚ LATERAL DE NAVEGACIÓN ===== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <span class="brand-logo">📚</span>
+        <div class="brand-text">
+          <strong>Bitácora Digital</strong>
+          <small>Portafolio de Evidencias</small>
+        </div>
+      </div>
+
+      <nav class="side-nav" aria-label="Navegación principal">
+        <!-- Semejanza: todos los ítems comparten forma; el activo se resalta -->
+        <button class="nav-item active" data-view="dashboard">
+          <span class="nav-icon">📊</span> Dashboard
+        </button>
+        <button class="nav-item" data-view="portfolio">
+          <span class="nav-icon">🗂️</span> Portafolio por Unidades
+        </button>
+        <button class="nav-item" data-view="evaluation">
+          <span class="nav-icon">✅</span> Vista de Evaluación
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="btn btn-primary btn-block" id="btn-new-evidence">
+          ➕ Nueva evidencia
+        </button>
+      </div>
+    </aside>
+
+    <!-- ===== BOTÓN HAMBURGUESA (móvil) ===== -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main class="content">
+
+      <!-- ---------- MÓDULO 1: DASHBOARD ---------- -->
+      <section class="view" id="view-dashboard">
+        <header class="view-header">
+          <h1>📊 Dashboard</h1>
+          <p class="view-sub">Resumen cuantitativo del portafolio y estado del sistema.</p>
+        </header>
+
+        <!-- Tarjetas de métricas — proximidad: cada métrica agrupada -->
+        <div class="stats-grid" id="stats-grid"></div>
+
+        <!-- Alertas del estado del sistema (visibilidad) -->
+        <div class="alerts-panel">
+          <h2>🔔 Estado del sistema</h2>
+          <div id="alerts-container"></div>
+        </div>
+
+        <!-- Barra visual de distribución por unidad -->
+        <div class="distribution-panel">
+          <h2>📈 Distribución por unidad</h2>
+          <div id="distribution-bars"></div>
+        </div>
+      </section>
+
+      <!-- ---------- MÓDULO 2: PORTAFOLIO POR UNIDADES ---------- -->
+      <section class="view hidden" id="view-portfolio">
+        <header class="view-header">
+          <h1>🗂️ Portafolio por Unidades</h1>
+          <p class="view-sub">Filtra tus evidencias por unidad del curso (Card Sorting).</p>
+        </header>
+
+        <!-- Navegación de filtros — card sorting -->
+        <nav class="unit-filter" aria-label="Filtrar por unidad">
+          <button class="filter-btn active" data-unit="Todas">Todas</button>
+          <button class="filter-btn" data-unit="Unidad 1">Unidad 1</button>
+          <button class="filter-btn" data-unit="Unidad 2">Unidad 2</button>
+          <button class="filter-btn" data-unit="Unidad 3">Unidad 3</button>
+        </nav>
+
+        <p class="results-count" id="results-count"></p>
+
+        <div class="cards-grid" id="cards-container"></div>
+
+        <div class="empty-state hidden" id="empty-portfolio">
+          <p>📭 No hay evidencias en esta vista.</p>
+          <p class="empty-hint">Pulsa "Nueva evidencia" para registrar la primera.</p>
+        </div>
+      </section>
+
+      <!-- ---------- MÓDULO 3: VISTA DE EVALUACIÓN (PROFESOR) ---------- -->
+      <section class="view hidden" id="view-evaluation">
+        <header class="view-header">
+          <h1>✅ Vista de Evaluación</h1>
+          <p class="view-sub">Listado completo organizado para calificación rápida.</p>
+        </header>
+
+        <!-- Salida limpia y escaneable: agrupada por unidad -->
+        <div id="evaluation-container"></div>
+
+        <div class="empty-state hidden" id="empty-evaluation">
+          <p>📭 Aún no hay entregas registradas.</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ===== MODAL DE FORMULARIO (Agregar / Editar) ===== -->
+  <div class="modal-overlay hidden" id="form-modal" role="dialog" aria-modal="true" aria-labelledby="form-modal-title">
+    <div class="modal-box modal-form">
+      <h3 id="form-modal-title">➕ Registrar nueva evidencia</h3>
+
+      <form id="evidence-form" novalidate>
+        <input type="hidden" id="evidence-id" />
+
+        <!-- Control de entrada: label sobre el campo -->
+        <div class="form-group">
+          <label for="input-title">Título de la evidencia <span class="required">*</span></label>
+          <input type="text" id="input-title" placeholder="Ej. Informe de laboratorio N° 3" maxlength="80" />
+          <span class="field-error" id="error-title" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="input-description">Descripción <span class="required">*</span></label>
+          <textarea id="input-description" rows="3" placeholder="Describe brevemente la evidencia…" maxlength="300"></textarea>
+          <span class="field-error" id="error-description" role="alert"></span>
+        </div>
+
+        <!-- Categorización obligatoria mediante lista desplegable -->
+        <div class="form-group">
+          <label for="input-unit">Unidad del curso <span class="required">*</span></label>
+          <select id="input-unit">
+            <option value="" disabled selected>— Selecciona una unidad —</option>
+            <option value="Unidad 1">Unidad 1</option>
+            <option value="Unidad 2">Unidad 2</option>
+            <option value="Unidad 3">Unidad 3</option>
+          </select>
+          <span class="field-error" id="error-unit" role="alert"></span>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" id="btn-cancel-form">Cancelar</button>
+          <!-- Semejanza: color primario para la acción afirmativa -->
+          <button type="submit" class="btn btn-primary" id="btn-submit">Agregar evidencia</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== MODAL DE CONFIRMACIÓN DE BORRADO (Prevención de errores) ===== -->
+  <div class="modal-overlay hidden" id="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+    <div class="modal-box">
+      <h3 id="confirm-title">⚠️ Confirmar eliminación</h3>
+      <p id="confirm-message">Vas a eliminar esta evidencia de forma permanente. Esta acción no se puede deshacer.</p>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" id="btn-modal-cancel">Cancelar</button>
+        <!-- Rojo semántico para acción destructiva -->
+        <button class="btn btn-danger" id="btn-modal-confirm">Sí, eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CONTENEDOR DE TOASTS (Retroalimentación / visibilidad) ===== -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
