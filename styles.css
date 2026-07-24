@@ -302,6 +302,16 @@ body {
 .card-description { font-size: 0.9rem; color: var(--color-text-muted); flex-grow: 1; word-break: break-word; }
 .card-date { font-size: 0.75rem; color: var(--color-text-muted); }
 
+/* Enlace al archivo adjunto (Cloudinary) dentro de la tarjeta */
+.card-file-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  word-break: break-word;
+}
+.card-file-link:hover { text-decoration: underline; }
+
 /* Proximidad: zona de acciones separada por un borde superior */
 .card-actions {
   display: flex;
@@ -404,6 +414,7 @@ body {
 .form-group textarea { resize: vertical; }
 
 .field-error { color: var(--color-danger); font-size: 0.8rem; min-height: 1em; }
+.file-hint { color: var(--color-text-muted); font-size: 0.8rem; min-height: 1em; }
 .form-group.has-error input,
 .form-group.has-error textarea,
 .form-group.has-error select { border-color: var(--color-danger); }

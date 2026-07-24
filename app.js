@@ -9,6 +9,10 @@
 
   const STORAGE_KEY = "bitacora_evidencias_v2";
 
+  // ---------- Configuración de Cloudinary (subida no firmada) ----------
+  const CLOUD_NAME = "aeyvrrn4";
+  const UPLOAD_PRESET = "mi_preset";
+
   const UNITS = ["Unidad 1", "Unidad 2", "Unidad 3"];
   // Mapea cada unidad a su sufijo de clase cromática (semejanza visual)
   const UNIT_CLASS = { "Unidad 1": "u1", "Unidad 2": "u2", "Unidad 3": "u3" };
@@ -31,6 +35,8 @@
   const inputTitle = $("input-title");
   const inputDescription = $("input-description");
   const inputUnit = $("input-unit");
+  const inputFile = $("input-file");
+  const currentFileHint = $("current-file-hint");
   const btnSubmit = $("btn-submit");
   const formModal = $("form-modal");
   const formModalTitle = $("form-modal-title");
@@ -58,6 +64,30 @@
 
   function saveEvidences() {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(evidences));
+  }
+
+  // ==========================================================
+  //  ARCHIVOS ADJUNTOS (Cloudinary)
+  //  Se sube el archivo a Cloudinary y solo la URL resultante
+  //  se guarda en localStorage junto con la evidencia, evitando
+  //  el límite de tamaño de localStorage.
+  // ==========================================================
+  async function subirArchivoCloudinary(file) {
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", UPLOAD_PRESET);
+
+    const response = await fetch(
+      `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/auto/upload`,
+      { method: "POST", body: formData }
+    );
+
+    if (!response.ok) {
+      throw new Error("Error de red o de configuración al subir el archivo.");
+    }
+
+    const data = await response.json();
+    return { url: data.secure_url, name: file.name };
   }
 
   // ==========================================================
@@ -201,6 +231,18 @@
     date.className = "card-date";
     date.textContent = `📅 ${evidence.createdAt}`;
 
+    card.append(badge, title, description, date);
+
+    if (evidence.fileUrl) {
+      const fileLink = document.createElement("a");
+      fileLink.className = "card-file-link";
+      fileLink.href = evidence.fileUrl;
+      fileLink.target = "_blank";
+      fileLink.rel = "noopener noreferrer";
+      fileLink.textContent = `📎 ${evidence.fileName || "Ver archivo adjunto"}`;
+      card.appendChild(fileLink);
+    }
+
     // Proximidad: acciones agrupadas al pie de la misma tarjeta
     const actions = document.createElement("div");
     actions.className = "card-actions";
@@ -216,7 +258,7 @@
     btnDelete.addEventListener("click", () => requestDelete(evidence.id));
 
     actions.append(btnEdit, btnDelete);
-    card.append(badge, title, description, date, actions);
+    card.appendChild(actions);
     return card;
   }
 
@@ -251,9 +293,10 @@
       table.innerHTML = `
         <thead>
           <tr>
-            <th style="width:28%">Título</th>
+            <th style="width:26%">Título</th>
             <th>Descripción</th>
-            <th style="width:130px">Fecha</th>
+            <th style="width:120px">Fecha</th>
+            <th style="width:110px">Archivo</th>
           </tr>
         </thead>
         <tbody></tbody>`;
@@ -269,7 +312,18 @@
         tdD.textContent = e.description;
         const tdF = document.createElement("td");
         tdF.textContent = e.createdAt;
-        tr.append(tdT, tdD, tdF);
+        const tdFile = document.createElement("td");
+        if (e.fileUrl) {
+          const link = document.createElement("a");
+          link.href = e.fileUrl;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.textContent = "📎 Ver";
+          tdFile.appendChild(link);
+        } else {
+          tdFile.textContent = "—";
+        }
+        tr.append(tdT, tdD, tdF, tdFile);
         tbody.appendChild(tr);
       });
 
@@ -302,10 +356,15 @@
       inputTitle.value = evidence.title;
       inputDescription.value = evidence.description;
       inputUnit.value = evidence.unit;
+      inputFile.value = "";
+      currentFileHint.textContent = evidence.fileUrl
+        ? `📎 Archivo actual: ${evidence.fileName || "ver adjunto"} (elige uno nuevo para reemplazarlo)`
+        : "";
       formModalTitle.textContent = "✏️ Editar evidencia";
       btnSubmit.textContent = "Guardar cambios";
     } else {
       form.reset();
+      currentFileHint.textContent = "";
       formModalTitle.textContent = "➕ Registrar nueva evidencia";
       btnSubmit.textContent = "Agregar evidencia";
     }
@@ -318,6 +377,7 @@
     formModal.classList.add("hidden");
     editingId = null;
     form.reset();
+    currentFileHint.textContent = "";
     clearErrors();
   }
 
@@ -344,7 +404,7 @@
     return valid;
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     if (!validateForm()) return;
 
@@ -354,8 +414,28 @@
       unit: inputUnit.value,
     };
 
+    const file = inputFile.files[0];
+    const originalBtnText = btnSubmit.textContent;
+
+    // Si se eligió un archivo, subirlo primero a Cloudinary
+    if (file) {
+      btnSubmit.disabled = true;
+      btnSubmit.textContent = "⏳ Subiendo archivo…";
+      try {
+        const { url, name } = await subirArchivoCloudinary(file);
+        data.fileUrl = url;
+        data.fileName = name;
+      } catch (error) {
+        console.error("Error al subir el archivo:", error);
+        showToast("No se pudo subir el archivo. Se guardó el resto de la evidencia.", "danger");
+      } finally {
+        btnSubmit.disabled = false;
+        btnSubmit.textContent = originalBtnText;
+      }
+    }
+
     if (editingId !== null) {
-      // UPDATE
+      // UPDATE — conserva el archivo previo si no se subió uno nuevo
       const evidence = evidences.find((e) => e.id === editingId);
       Object.assign(evidence, data);
       showToast("Evidencia actualizada con éxito.", "info");

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bitácora Digital — Portafolio de Evidencias</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <!-- ============================================================
        LAYOUT GENERAL: menú lateral fijo + área de contenido.
@@ -133,7 +135,8 @@
 
         <div class="form-group">
           <label for="input-description">Descripción <span class="required">*</span></label>
-          <textarea id="input-description" rows="3" placeholder="Describe brevemente la evidencia…" maxlength="300"></textarea>
+          <textarea id="input-description" rows="3" placeholder="Describe brevemente la evidencia…"
+            maxlength="300"></textarea>
           <span class="field-error" id="error-description" role="alert"></span>
         </div>
 
@@ -147,6 +150,13 @@
             <option value="Unidad 3">Unidad 3</option>
           </select>
           <span class="field-error" id="error-unit" role="alert"></span>
+        </div>
+
+        <!-- NUEVO: Campo para adjuntar archivo -->
+        <div class="form-group">
+          <label for="input-file">Archivo adjunto (PDF, Imagen)</label>
+          <input type="file" id="input-file" accept=".pdf, .png, .jpg, .jpeg" />
+          <small class="file-hint" id="current-file-hint"></small>
         </div>
 
         <div class="modal-actions">
@@ -176,4 +186,6 @@
 
   <script src="app.js"></script>
 </body>
+
 </html>
+c:\Users\Administrator\AppData\Local\Packages\MicrosoftWindows.Client.Core_cw5n1h2txyewy\TempState\ScreenClip\{CC59D19F-9244-404C-A9F6-E262FF8228ED}.png
