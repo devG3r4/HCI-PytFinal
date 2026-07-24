@@ -98,8 +98,9 @@
       <path d="M6 3.5h8l4 4v13H6z"></path>
       <path d="M14 3.5v4h4M9 12h6M9 16h5"></path>
     </symbol>
-    <symbol id="icon-google" viewBox="0 0 24 24">
-      <path d="M20 12.2c0 4.7-3.2 8-7.9 8A8.2 8.2 0 1 1 17.8 6l-2.5 2.4a4.7 4.7 0 1 0 2.2 5.1H12v-3.2h8z"></path>
+    <symbol id="icon-onedrive" viewBox="0 0 24 24">
+      <path d="M8.2 18.2h9.1a3.7 3.7 0 0 0 .5-7.4A6.2 6.2 0 0 0 6.2 9.6a4.4 4.4 0 0 0 2 8.6Z"></path>
+      <path d="M8.2 18.2h9.1"></path>
     </symbol>
   </svg>
 
@@ -141,11 +142,17 @@
             <button class="section-link" type="button" data-view="portfolio" data-unit="Todas">
               <span class="mini-dot dot-blue"></span> Recientes
             </button>
-            <button class="section-link" type="button" data-view="portfolio" data-unit="Unidad 1">
-              <span class="mini-dot dot-purple"></span> Unidad 1
+            <button class="section-link" type="button" data-view="portfolio" data-unit="Talleres">
+              <span class="mini-dot dot-purple"></span> Talleres
             </button>
-            <button class="section-link" type="button" data-view="portfolio" data-unit="Unidad 2">
-              <span class="mini-dot dot-cyan"></span> Unidad 2
+            <button class="section-link" type="button" data-view="portfolio" data-unit="Laboratorios">
+              <span class="mini-dot dot-cyan"></span> Laboratorios
+            </button>
+            <button class="section-link" type="button" data-view="portfolio" data-unit="Parciales">
+              <span class="mini-dot dot-blue"></span> Parciales
+            </button>
+            <button class="section-link" type="button" data-view="portfolio" data-unit="Proyectos">
+              <span class="mini-dot dot-purple"></span> Proyectos
             </button>
           </div>
         </details>
@@ -191,7 +198,6 @@
             <svg class="icon" aria-hidden="true"><use href="#icon-users"></use></svg>
             <span>Invitar</span>
           </button>
-          <button class="btn btn-upgrade" type="button" id="btn-upgrade">Mejorar cuenta</button>
           <button class="icon-button" type="button" id="theme-toggle" aria-label="Cambiar a tema claro" title="Cambiar tema">
             <svg class="icon" aria-hidden="true"><use id="theme-icon" href="#icon-sun"></use></svg>
           </button>
@@ -244,9 +250,9 @@
                   <span class="quick-action-icon"><svg class="icon" aria-hidden="true"><use href="#icon-plus"></use></svg></span>
                   <span><strong>Create a folder</strong><small>Organiza tu workspace</small></span>
                 </button>
-                <button class="quick-action" id="btn-import-drive" type="button">
-                  <span class="quick-action-icon google-icon"><svg class="icon" aria-hidden="true"><use href="#icon-google"></use></svg></span>
-                  <span><strong>Import from Google Drive</strong><small>Añade archivos existentes</small></span>
+                <button class="quick-action" id="btn-import-onedrive" type="button">
+                  <span class="quick-action-icon onedrive-icon"><svg class="icon" aria-hidden="true"><use href="#icon-onedrive"></use></svg></span>
+                  <span><strong>Import from OneDrive</strong><small>Añade archivos existentes</small></span>
                 </button>
               </div>
             </div>
@@ -268,14 +274,14 @@
           <div class="dashboard-bottom">
             <section class="panel distribution-panel">
               <div class="panel-heading compact">
-                <div><p class="eyebrow">Organización</p><h2>Distribución por unidad</h2></div>
+                <div><p class="eyebrow">Organización</p><h2>Distribución por categoría</h2></div>
                 <svg class="icon icon-muted" aria-hidden="true"><use href="#icon-more"></use></svg>
               </div>
               <div id="distribution-bars"></div>
             </section>
             <section class="panel tips-panel">
               <div class="tip-mark">✦</div>
-              <div><p class="eyebrow">Consejo rápido</p><h2>Haz que tu bitácora trabaje por ti</h2><p>Usa las unidades y los nombres de archivo para encontrar cualquier entrega en segundos.</p></div>
+              <div><p class="eyebrow">Consejo rápido</p><h2>Haz que tu bitácora trabaje por ti</h2><p>Usa talleres, laboratorios, parciales, proyectos y nombres claros para encontrar cualquier entrega en segundos.</p></div>
             </section>
           </div>
         </section>
@@ -298,11 +304,12 @@
 
           <div class="file-toolbar">
             <div class="toolbar-left">
-              <nav class="unit-filter" aria-label="Filtrar por unidad">
+              <nav class="unit-filter" aria-label="Filtrar por categoría">
                 <button class="filter-btn active" type="button" data-unit="Todas">Todas</button>
-                <button class="filter-btn" type="button" data-unit="Unidad 1">Unidad 1</button>
-                <button class="filter-btn" type="button" data-unit="Unidad 2">Unidad 2</button>
-                <button class="filter-btn" type="button" data-unit="Unidad 3">Unidad 3</button>
+                <button class="filter-btn" type="button" data-unit="Talleres">Talleres</button>
+                <button class="filter-btn" type="button" data-unit="Laboratorios">Laboratorios</button>
+                <button class="filter-btn" type="button" data-unit="Parciales">Parciales</button>
+                <button class="filter-btn" type="button" data-unit="Proyectos">Proyectos</button>
               </nav>
               <span class="results-count" id="results-count"></span>
             </div>
@@ -363,12 +370,13 @@
           <span class="field-error" id="error-description" role="alert"></span>
         </div>
         <div class="form-group">
-          <label for="input-unit">Unidad del curso <span class="required">*</span></label>
+          <label for="input-unit">Tipo de evidencia <span class="required">*</span></label>
           <select id="input-unit">
-            <option value="" disabled selected>— Selecciona una unidad —</option>
-            <option value="Unidad 1">Unidad 1</option>
-            <option value="Unidad 2">Unidad 2</option>
-            <option value="Unidad 3">Unidad 3</option>
+            <option value="" disabled selected>— Selecciona una categoría —</option>
+            <option value="Talleres">Talleres</option>
+            <option value="Laboratorios">Laboratorios</option>
+            <option value="Parciales">Parciales</option>
+            <option value="Proyectos">Proyectos</option>
           </select>
           <span class="field-error" id="error-unit" role="alert"></span>
         </div>

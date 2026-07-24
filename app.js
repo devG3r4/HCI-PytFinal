@@ -15,10 +15,25 @@
   const UPLOAD_PRESET = "mi_preset";
   const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
   const ALLOWED_FILE_TYPES = ["application/pdf", "image/png", "image/jpeg"];
+  const ONEDRIVE_CONFIG = window.BITACORA_ONEDRIVE_CONFIG || {
+    clientId: "",
+    tenantId: "common",
+  };
 
-  const UNITS = ["Unidad 1", "Unidad 2", "Unidad 3"];
-  // Mapea cada unidad a su sufijo de clase cromática (semejanza visual)
-  const UNIT_CLASS = { "Unidad 1": "u1", "Unidad 2": "u2", "Unidad 3": "u3" };
+  const UNITS = ["Talleres", "Laboratorios", "Parciales", "Proyectos"];
+  // Mantiene compatibilidad con evidencias creadas en la versión anterior.
+  const LEGACY_UNIT_MAP = {
+    "Unidad 1": "Talleres",
+    "Unidad 2": "Laboratorios",
+    "Unidad 3": "Parciales",
+  };
+  // Mapea cada categoría a su sufijo de clase cromática.
+  const UNIT_CLASS = {
+    Talleres: "u1",
+    Laboratorios: "u2",
+    Parciales: "u3",
+    Proyectos: "u4",
+  };
 
   // ---------- Estado ----------
   let evidences = loadEvidences();
@@ -75,7 +90,12 @@
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
       const parsed = raw ? JSON.parse(raw) : [];
-      return Array.isArray(parsed) ? parsed : [];
+      return Array.isArray(parsed)
+        ? parsed.map((evidence) => ({
+            ...evidence,
+            unit: LEGACY_UNIT_MAP[evidence.unit] || evidence.unit,
+          }))
+        : [];
     } catch {
       return [];
     }
@@ -408,9 +428,9 @@
     }
     empty.classList.add("hidden");
 
-    // Salida organizada y escaneable: agrupada por unidad
-    UNITS.forEach((unit) => {
-      const items = evidences.filter((e) => e.unit === unit);
+    // Salida organizada y escaneable: agrupada por tipo de evidencia.
+    UNITS.forEach((category) => {
+      const items = evidences.filter((e) => e.unit === category);
       if (items.length === 0) return;
 
       const group = document.createElement("div");
@@ -418,7 +438,7 @@
 
       const heading = document.createElement("h2");
       heading.className = "eval-group-title";
-      heading.innerHTML = `${unit} <span class="count-pill">${items.length} entrega(s)</span>`;
+      heading.innerHTML = `${category} <span class="count-pill">${items.length} entrega(s)</span>`;
 
       const table = document.createElement("table");
       table.className = "eval-table";
@@ -465,10 +485,10 @@
   }
 
   // ==========================================================
-  //  UTILIDAD: conteo por unidad
+  //  UTILIDAD: conteo por categoría
   // ==========================================================
   function countByUnit() {
-    const counts = { "Unidad 1": 0, "Unidad 2": 0, "Unidad 3": 0 };
+    const counts = Object.fromEntries(UNITS.map((category) => [category, 0]));
     evidences.forEach((e) => {
       if (counts[e.unit] !== undefined) counts[e.unit]++;
     });
@@ -530,7 +550,7 @@
     if (!inputDescription.value.trim()) { setFieldError("description", "La descripción es obligatoria."); valid = false; }
     else setFieldError("description", "");
 
-    if (!inputUnit.value) { setFieldError("unit", "Selecciona una unidad."); valid = false; }
+    if (!inputUnit.value) { setFieldError("unit", "Selecciona una categoría."); valid = false; }
     else setFieldError("unit", "");
 
     return valid;
@@ -759,9 +779,14 @@
     quickUploadInput.value = "";
   });
   $("btn-create-folder").addEventListener("click", () => showToast("Las carpetas estarán disponibles próximamente.", "info"));
-  $("btn-import-drive").addEventListener("click", () => showToast("La importación desde Google Drive estará disponible próximamente.", "info"));
+  $("btn-import-onedrive").addEventListener("click", () => {
+    if (!ONEDRIVE_CONFIG.clientId) {
+      showToast("OneDrive está seleccionado. Falta configurar el clientId de Microsoft Entra.", "info");
+      return;
+    }
+    showToast("La conexión con OneDrive está lista para configurarse con Microsoft Graph.", "info");
+  });
   $("btn-invite").addEventListener("click", () => showToast("La invitación de miembros estará disponible próximamente.", "info"));
-  $("btn-upgrade").addEventListener("click", () => showToast("Tu cuenta personal ya está activa.", "info"));
   $("workspace-switcher").addEventListener("click", () => showToast("Solo tienes un workspace configurado.", "info"));
   $("btn-profile").addEventListener("click", () => showToast("Perfil de devG3r4", "info"));
 
@@ -813,10 +838,10 @@
   // ==========================================================
   if (localStorage.getItem(STORAGE_KEY) === null) {
     evidences = [
-      { id: 1, title: "Mapa conceptual de heurísticas de Nielsen", description: "Resumen de las 10 heurísticas de usabilidad con ejemplos en apps móviles.", unit: "Unidad 1", createdAt: "01 jul. 2026" },
-      { id: 2, title: "Informe de Card Sorting", description: "Resultados de la sesión de card sorting abierto con 8 participantes.", unit: "Unidad 2", createdAt: "03 jul. 2026" },
-      { id: 3, title: "Prototipo de baja fidelidad", description: "Wireframes en papel de la pantalla principal con anotaciones de feedback.", unit: "Unidad 3", createdAt: "05 jul. 2026" },
-      { id: 4, title: "Test de usabilidad moderado", description: "Guion y hallazgos de 5 pruebas con usuarios sobre el flujo de registro.", unit: "Unidad 1", createdAt: "06 jul. 2026" },
+      { id: 1, title: "Taller de heurísticas de Nielsen", description: "Resumen de las 10 heurísticas de usabilidad con ejemplos en apps móviles.", unit: "Talleres", createdAt: "01 jul. 2026" },
+      { id: 2, title: "Laboratorio de Card Sorting", description: "Resultados de la sesión de card sorting abierto con 8 participantes.", unit: "Laboratorios", createdAt: "03 jul. 2026" },
+      { id: 3, title: "Proyecto de prototipo de baja fidelidad", description: "Wireframes en papel de la pantalla principal con anotaciones de feedback.", unit: "Proyectos", createdAt: "05 jul. 2026" },
+      { id: 4, title: "Parcial de test de usabilidad", description: "Guion y hallazgos de 5 pruebas con usuarios sobre el flujo de registro.", unit: "Parciales", createdAt: "06 jul. 2026" },
     ];
     saveEvidences();
   }
