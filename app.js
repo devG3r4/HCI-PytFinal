@@ -12,6 +12,8 @@
   // ---------- Configuración de Cloudinary (subida no firmada) ----------
   const CLOUD_NAME = "aeyvrrn4";
   const UPLOAD_PRESET = "mi_preset";
+  const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
+  const ALLOWED_FILE_TYPES = ["application/pdf", "image/png", "image/jpeg"];
 
   const UNITS = ["Unidad 1", "Unidad 2", "Unidad 3"];
   // Mapea cada unidad a su sufijo de clase cromática (semejanza visual)
@@ -73,6 +75,14 @@
   //  el límite de tamaño de localStorage.
   // ==========================================================
   async function subirArchivoCloudinary(file) {
+    if (!ALLOWED_FILE_TYPES.includes(file.type)) {
+      throw new Error("Tipo de archivo no permitido. Usa PDF, PNG o JPG.");
+    }
+
+    if (file.size > MAX_FILE_SIZE) {
+      throw new Error("El archivo supera el límite de 10 MB.");
+    }
+
     const formData = new FormData();
     formData.append("file", file);
     formData.append("upload_preset", UPLOAD_PRESET);
@@ -427,7 +437,7 @@
         data.fileName = name;
       } catch (error) {
         console.error("Error al subir el archivo:", error);
-        showToast("No se pudo subir el archivo. Se guardó el resto de la evidencia.", "danger");
+        showToast(error.message || "No se pudo subir el archivo. Se guardó el resto de la evidencia.", "danger");
       } finally {
         btnSubmit.disabled = false;
         btnSubmit.textContent = originalBtnText;
