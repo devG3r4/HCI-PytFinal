@@ -125,7 +125,7 @@ button:disabled { cursor: not-allowed; }
 /* ==========================================================
    Shell y navegación
    ========================================================== */
-.app-shell { min-height: 100dvh; }
+.app-shell { min-height: 100dvh; padding-left: var(--sidebar-width); }
 
 .sidebar {
   position: fixed;
@@ -288,7 +288,6 @@ button:disabled { cursor: not-allowed; }
 .storage-note small { margin-top: 2px; font-size: .64rem; }
 .storage-dot { width: 7px; height: 7px; background: var(--success); border-radius: 50%; box-shadow: 0 0 0 4px rgba(131, 227, 174, .1); }
 
-.app-main { min-height: 100dvh; margin-left: var(--sidebar-width); }
 .menu-toggle { display: none; }
 
 /* ==========================================================
@@ -714,7 +713,7 @@ button:disabled { cursor: not-allowed; }
 @media (max-width: 900px) {
   .sidebar { transform: translateX(-102%); box-shadow: var(--shadow); }
   .sidebar.open { transform: translateX(0); }
-  .app-main { margin-left: 0; }
+  .app-shell { padding-left: 0; }
   .menu-toggle {
     position: fixed;
     top: 18px;
