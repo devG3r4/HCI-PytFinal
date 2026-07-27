@@ -1,6 +1,6 @@
 # HCI-PytFinal
 
-Bitácora Digital para organizar y evaluar evidencias del curso con una interfaz inspirada en Dropbox.
+Bitácora Digital para organizar y evaluar evidencias del curso con una interfaz.
 
 ## Incluye
 
