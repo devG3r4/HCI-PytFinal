@@ -19,6 +19,7 @@
     clientId: "",
     tenantId: "common",
   };
+  const GRAPH_SCOPES = ["User.Read", "Files.Read"];
 
   const UNITS = ["Talleres", "Laboratorios", "Parciales", "Proyectos"];
   // Mantiene compatibilidad con evidencias creadas en la versión anterior.
@@ -42,6 +43,7 @@
   let selectedEvidenceId = null;
   let editingId = null;
   let pendingDeleteId = null;
+  let pendingExternalFile = null;
 
   // ---------- Referencias al DOM ----------
   const $ = (id) => document.getElementById(id);
@@ -74,11 +76,14 @@
   const filterButtons = document.querySelectorAll(".filter-btn");
 
   const confirmModal = $("confirm-modal");
+  const helpModal = $("help-modal");
+  const onedriveModal = $("onedrive-modal");
+  const onedriveList = $("onedrive-list");
 
   const toastContainer = $("toast-container");
 
   const viewTitles = {
-    dashboard: "Overview",
+    dashboard: "Resumen",
     portfolio: "Todos los archivos",
     evaluation: "Evaluación",
   };
@@ -410,8 +415,25 @@
       openForm(selected.id);
       return;
     }
-    const actionNames = { move: "Mover", copy: "Copiar" };
-    showToast(`${actionNames[action]} estará disponible en una próxima versión.`, "info");
+    if (action === "move") {
+      openForm(selected.id);
+      inputUnit.focus();
+      showToast("Selecciona la nueva categoría y guarda los cambios.", "info");
+      return;
+    }
+    if (action === "copy") {
+      const duplicate = {
+        ...selected,
+        id: Date.now(),
+        title: `Copia de ${selected.title}`,
+        createdAt: formatDate(new Date()),
+      };
+      evidences.unshift(duplicate);
+      selectedEvidenceId = duplicate.id;
+      saveEvidences();
+      renderPortfolio();
+      showToast("Evidencia duplicada con éxito.");
+    }
   }
 
   // ==========================================================
@@ -516,7 +538,9 @@
       btnSubmit.textContent = "Guardar cambios";
     } else {
       form.reset();
-      currentFileHint.textContent = "";
+      currentFileHint.textContent = pendingExternalFile
+        ? `☁️ Archivo de OneDrive: ${pendingExternalFile.name}`
+        : "";
       formModalTitle.textContent = "➕ Registrar nueva evidencia";
       btnSubmit.textContent = "Agregar evidencia";
     }
@@ -528,6 +552,7 @@
   function closeForm() {
     formModal.classList.add("hidden");
     editingId = null;
+    pendingExternalFile = null;
     form.reset();
     currentFileHint.textContent = "";
     clearErrors();
@@ -538,8 +563,10 @@
   }
 
   function setFieldError(field, message) {
+    const input = $(`input-${field}`);
     $(`error-${field}`).textContent = message;
-    $(`input-${field}`).closest(".form-group").classList.toggle("has-error", Boolean(message));
+    input.closest(".form-group").classList.toggle("has-error", Boolean(message));
+    input.setAttribute("aria-invalid", String(Boolean(message)));
   }
 
   function validateForm() {
@@ -569,6 +596,11 @@
     const file = inputFile.files[0];
     const originalBtnText = btnSubmit.textContent;
     let uploadErrorMessage = "";
+
+    if (!file && pendingExternalFile) {
+      data.fileUrl = pendingExternalFile.url;
+      data.fileName = pendingExternalFile.name;
+    }
 
     // Si se eligió un archivo, subirlo primero a Cloudinary
     if (file) {
@@ -710,6 +742,94 @@
     assignFileToForm(file);
   }
 
+  function closeHelp() {
+    helpModal.classList.add("hidden");
+  }
+
+  function openHelp() {
+    helpModal.classList.remove("hidden");
+    $("btn-help-close").focus();
+  }
+
+  function closeOneDrive() {
+    onedriveModal.classList.add("hidden");
+    onedriveList.innerHTML = "";
+  }
+
+  function selectOneDriveFile(item) {
+    pendingExternalFile = {
+      name: item.name,
+      url: item.webUrl,
+    };
+    closeOneDrive();
+    openForm();
+    inputTitle.value = item.name.replace(/\.[^.]+$/, "");
+    inputDescription.value = "Archivo importado desde OneDrive.";
+    currentFileHint.textContent = `☁️ Archivo de OneDrive: ${item.name}`;
+    inputUnit.focus();
+  }
+
+  function renderOneDriveFiles(items) {
+    onedriveList.innerHTML = "";
+    const files = items.filter((item) => item.file);
+    if (files.length === 0) {
+      onedriveList.innerHTML = '<p class="empty-hint">No se encontraron archivos en la carpeta principal.</p>';
+      return;
+    }
+
+    files.forEach((item) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "onedrive-file";
+      button.innerHTML = '<span class="onedrive-file-icon">☁️</span><span><strong></strong><small></small></span>';
+      button.querySelector("strong").textContent = item.name;
+      button.querySelector("small").textContent = item.size
+        ? `${Math.max(1, Math.round(item.size / 1024))} KB`
+        : "Archivo de OneDrive";
+      button.addEventListener("click", () => selectOneDriveFile(item));
+      onedriveList.appendChild(button);
+    });
+  }
+
+  async function importFromOneDrive() {
+    if (!ONEDRIVE_CONFIG.clientId) {
+      showToast("Configura el clientId de Microsoft Entra para conectar OneDrive.", "info");
+      return;
+    }
+    if (!window.msal) {
+      showToast("No se pudo cargar el acceso de Microsoft. Revisa tu conexión.", "danger");
+      return;
+    }
+
+    onedriveModal.classList.remove("hidden");
+    onedriveList.innerHTML = '<p class="empty-hint">Conectando con Microsoft…</p>';
+    try {
+      const client = new window.msal.PublicClientApplication({
+        auth: {
+          clientId: ONEDRIVE_CONFIG.clientId,
+          authority: `https://login.microsoftonline.com/${ONEDRIVE_CONFIG.tenantId || "common"}`,
+          redirectUri: window.location.origin + window.location.pathname,
+        },
+        cache: { cacheLocation: "sessionStorage" },
+      });
+      await client.initialize();
+      const login = await client.loginPopup({ scopes: GRAPH_SCOPES });
+      const token = await client.acquireTokenSilent({
+        account: login.account,
+        scopes: GRAPH_SCOPES,
+      });
+      const response = await fetch("https://graph.microsoft.com/v1.0/me/drive/root/children?$top=100", {
+        headers: { Authorization: `Bearer ${token.accessToken}` },
+      });
+      if (!response.ok) throw new Error("Microsoft Graph no devolvió los archivos.");
+      const data = await response.json();
+      renderOneDriveFiles(data.value || []);
+    } catch (error) {
+      console.error("Error al conectar OneDrive:", error);
+      onedriveList.innerHTML = '<p class="field-error">No se pudo abrir OneDrive. Verifica la configuración de Microsoft Entra.</p>';
+    }
+  }
+
   function setupDropzone() {
     if (!uploadDropzone) return;
     ["dragenter", "dragover"].forEach((eventName) => {
@@ -778,16 +898,14 @@
     handleQuickUpload(quickUploadInput.files[0]);
     quickUploadInput.value = "";
   });
-  $("btn-create-folder").addEventListener("click", () => showToast("Las carpetas estarán disponibles próximamente.", "info"));
-  $("btn-import-onedrive").addEventListener("click", () => {
-    if (!ONEDRIVE_CONFIG.clientId) {
-      showToast("OneDrive está seleccionado. Falta configurar el clientId de Microsoft Entra.", "info");
-      return;
-    }
-    showToast("La conexión con OneDrive está lista para configurarse con Microsoft Graph.", "info");
-  });
-  $("btn-invite").addEventListener("click", () => showToast("La invitación de miembros estará disponible próximamente.", "info"));
-  $("workspace-switcher").addEventListener("click", () => showToast("Solo tienes un workspace configurado.", "info"));
+  $("btn-create-folder").addEventListener("click", () => openForm());
+  $("btn-import-onedrive").addEventListener("click", importFromOneDrive);
+  $("btn-help").addEventListener("click", openHelp);
+  $("btn-help-close").addEventListener("click", closeHelp);
+  $("btn-help-understood").addEventListener("click", closeHelp);
+  $("btn-onedrive-close").addEventListener("click", closeOneDrive);
+  $("btn-onedrive-cancel").addEventListener("click", closeOneDrive);
+  $("workspace-switcher").addEventListener("click", () => showToast("Portafolio HCI activo.", "info"));
   $("btn-profile").addEventListener("click", () => showToast("Perfil de devG3r4", "info"));
 
   [
@@ -827,10 +945,14 @@
   // Cerrar modales con clic fuera o Escape (control y libertad del usuario)
   formModal.addEventListener("click", (e) => { if (e.target === formModal) closeForm(); });
   confirmModal.addEventListener("click", (e) => { if (e.target === confirmModal) closeConfirm(); });
+  helpModal.addEventListener("click", (e) => { if (e.target === helpModal) closeHelp(); });
+  onedriveModal.addEventListener("click", (e) => { if (e.target === onedriveModal) closeOneDrive(); });
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape") return;
     if (!confirmModal.classList.contains("hidden")) closeConfirm();
     else if (!formModal.classList.contains("hidden")) closeForm();
+    else if (!helpModal.classList.contains("hidden")) closeHelp();
+    else if (!onedriveModal.classList.contains("hidden")) closeOneDrive();
   });
 
   // ==========================================================

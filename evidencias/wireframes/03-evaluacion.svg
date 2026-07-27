@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Wireframe de la vista de evaluación</title>
+  <desc id="desc">Estructura de tablas agrupadas por talleres, laboratorios, parciales y proyectos.</desc>
+  <rect width="1200" height="700" fill="#f7f8fa"/>
+  <rect x="22" y="22" width="1156" height="656" rx="12" fill="#fff" stroke="#b6bdc8" stroke-width="2"/>
+  <rect x="22" y="22" width="220" height="656" rx="12" fill="#e9edf2"/>
+  <rect x="48" y="54" width="136" height="20" rx="4" fill="#b6bdc8"/>
+  <g fill="#aab2bd">
+    <rect x="48" y="126" width="154" height="18" rx="4"/>
+    <rect x="48" y="164" width="130" height="18" rx="4"/>
+    <rect x="48" y="202" width="148" height="18" rx="4"/>
+  </g>
+  <rect x="264" y="22" width="914" height="74" fill="#fff" stroke="#d8dde5"/>
+  <rect x="292" y="48" width="240" height="18" rx="4" fill="#aab2bd"/>
+  <circle cx="1130" cy="58" r="15" fill="#d9ff43" stroke="#a6c700"/>
+  <g stroke="#b6bdc8" fill="#f1f3f6">
+    <rect x="292" y="132" width="834" height="132" rx="8"/>
+    <rect x="292" y="290" width="834" height="132" rx="8"/>
+    <rect x="292" y="448" width="834" height="132" rx="8"/>
+  </g>
+  <g fill="#aab2bd">
+    <rect x="316" y="150" width="176" height="17" rx="4"/>
+    <rect x="316" y="192" width="786" height="1" />
+    <rect x="316" y="218" width="260" height="12" rx="3"/>
+    <rect x="316" y="308" width="215" height="17" rx="4"/>
+    <rect x="316" y="350" width="786" height="1" />
+    <rect x="316" y="376" width="260" height="12" rx="3"/>
+    <rect x="316" y="466" width="170" height="17" rx="4"/>
+    <rect x="316" y="508" width="786" height="1" />
+    <rect x="316" y="534" width="260" height="12" rx="3"/>
+  </g>
+  <text x="44" y="660" font-family="Arial, sans-serif" font-size="15" fill="#566170">Wireframe 03 · Consulta para revisión y calificación</text>
+</svg>

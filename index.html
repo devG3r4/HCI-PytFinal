@@ -102,6 +102,11 @@
       <path d="M8.2 18.2h9.1a3.7 3.7 0 0 0 .5-7.4A6.2 6.2 0 0 0 6.2 9.6a4.4 4.4 0 0 0 2 8.6Z"></path>
       <path d="M8.2 18.2h9.1"></path>
     </symbol>
+    <symbol id="icon-help" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"></circle>
+      <path d="M9.8 9a2.4 2.4 0 1 1 3.4 2.2c-.8.4-1.2.9-1.2 1.8"></path>
+      <path d="M12 17h.01"></path>
+    </symbol>
   </svg>
 
   <div class="app-shell">
@@ -113,15 +118,15 @@
 
       <button class="workspace-switcher" type="button" id="workspace-switcher" aria-label="Cambiar espacio de trabajo">
         <span class="workspace-avatar">B</span>
-        <span class="workspace-copy"><strong>Mi workspace</strong><small>Plan personal</small></span>
+        <span class="workspace-copy"><strong>Portafolio HCI</strong><small>Proyecto universitario</small></span>
         <svg class="icon icon-muted" aria-hidden="true"><use href="#icon-chevron"></use></svg>
       </button>
 
       <nav class="side-nav" aria-label="Navegación principal">
-        <p class="nav-label">Workspace</p>
+        <p class="nav-label">Portafolio</p>
         <button class="nav-item active" type="button" data-view="dashboard" aria-current="page">
           <svg class="icon" aria-hidden="true"><use href="#icon-grid"></use></svg>
-          <span>Overview</span>
+          <span>Resumen</span>
         </button>
         <button class="nav-item" type="button" data-view="portfolio">
           <svg class="icon" aria-hidden="true"><use href="#icon-folder"></use></svg>
@@ -135,7 +140,7 @@
 
         <details class="sidebar-section" open>
           <summary>
-            <span>Quick access</span>
+            <span>Acceso rápido</span>
             <svg class="icon icon-small" aria-hidden="true"><use href="#icon-chevron"></use></svg>
           </summary>
           <div class="section-links">
@@ -159,7 +164,7 @@
 
         <details class="sidebar-section">
           <summary>
-            <span>Starred</span>
+            <span>Destacados</span>
             <svg class="icon icon-small" aria-hidden="true"><use href="#icon-chevron"></use></svg>
           </summary>
           <p class="sidebar-note">Marca evidencias para tenerlas a mano.</p>
@@ -182,9 +187,9 @@
     <div class="app-main">
       <header class="topbar">
         <div class="topbar-context">
-          <span class="context-kicker">Workspace</span>
+          <span class="context-kicker">Portafolio</span>
           <span class="context-separator">/</span>
-          <strong id="topbar-context-title">Overview</strong>
+          <strong id="topbar-context-title">Resumen</strong>
         </div>
 
         <label class="search-box" for="global-search">
@@ -194,9 +199,9 @@
         </label>
 
         <div class="top-actions">
-          <button class="top-action top-action-text" type="button" id="btn-invite">
-            <svg class="icon" aria-hidden="true"><use href="#icon-users"></use></svg>
-            <span>Invitar</span>
+          <button class="top-action top-action-text" type="button" id="btn-help">
+            <svg class="icon" aria-hidden="true"><use href="#icon-help"></use></svg>
+            <span>Ayuda</span>
           </button>
           <button class="icon-button" type="button" id="theme-toggle" aria-label="Cambiar a tema claro" title="Cambiar tema">
             <svg class="icon" aria-hidden="true"><use id="theme-icon" href="#icon-sun"></use></svg>
@@ -241,18 +246,18 @@
                     <path class="illustration-accent" d="m167 83 28 15-14 8-28-14z" />
                   </svg>
                 </div>
-                <h2>Drop anything here to <span class="text-link">upload</span></h2>
+                <h2>Arrastra aquí una evidencia para <span class="text-link">subirla</span></h2>
                 <p>o <span class="text-link">explora tus archivos</span> desde tu dispositivo</p>
                 <span class="dropzone-meta">PDF, PNG o JPG · máximo 10 MB</span>
               </div>
               <div class="drop-actions">
                 <button class="quick-action" id="btn-create-folder" type="button">
                   <span class="quick-action-icon"><svg class="icon" aria-hidden="true"><use href="#icon-plus"></use></svg></span>
-                  <span><strong>Create a folder</strong><small>Organiza tu workspace</small></span>
+                  <span><strong>Nueva evidencia</strong><small>Registra una actividad del curso</small></span>
                 </button>
                 <button class="quick-action" id="btn-import-onedrive" type="button">
                   <span class="quick-action-icon onedrive-icon"><svg class="icon" aria-hidden="true"><use href="#icon-onedrive"></use></svg></span>
-                  <span><strong>Import from OneDrive</strong><small>Añade archivos existentes</small></span>
+                  <span><strong>Importar desde OneDrive</strong><small>Añade archivos de Microsoft 365</small></span>
                 </button>
               </div>
             </div>
@@ -314,11 +319,11 @@
               <span class="results-count" id="results-count"></span>
             </div>
             <div class="toolbar-actions" aria-label="Acciones sobre el archivo seleccionado">
-              <button class="toolbar-btn" id="action-download" type="button" disabled><svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg><span>Download</span></button>
+              <button class="toolbar-btn" id="action-download" type="button" disabled><svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg><span>Descargar</span></button>
               <button class="toolbar-btn danger-action" id="action-delete" type="button" disabled><svg class="icon" aria-hidden="true"><use href="#icon-trash"></use></svg><span>Eliminar</span></button>
               <button class="toolbar-btn" id="action-rename" type="button" disabled><svg class="icon" aria-hidden="true"><use href="#icon-edit"></use></svg><span>Renombrar</span></button>
-              <button class="toolbar-btn" id="action-move" type="button" disabled><svg class="icon" aria-hidden="true"><use href="#icon-move"></use></svg><span>Move</span></button>
-              <button class="toolbar-btn" id="action-copy" type="button" disabled><svg class="icon" aria-hidden="true"><use href="#icon-copy"></use></svg><span>Copy</span></button>
+              <button class="toolbar-btn" id="action-move" type="button" disabled><svg class="icon" aria-hidden="true"><use href="#icon-move"></use></svg><span>Mover</span></button>
+              <button class="toolbar-btn" id="action-copy" type="button" disabled><svg class="icon" aria-hidden="true"><use href="#icon-copy"></use></svg><span>Duplicar</span></button>
             </div>
           </div>
 
@@ -405,7 +410,40 @@
     </div>
   </div>
 
+  <div class="modal-overlay hidden" id="help-modal" role="dialog" aria-modal="true" aria-labelledby="help-title">
+    <div class="modal-box help-box">
+      <div class="modal-heading">
+        <div><p class="eyebrow">Guía rápida</p><h3 id="help-title">Cómo usar la bitácora</h3></div>
+        <button class="icon-button modal-close" type="button" id="btn-help-close" aria-label="Cerrar ayuda">×</button>
+      </div>
+      <ol class="help-steps">
+        <li><strong>Registra</strong><span>Crea una evidencia y completa título, descripción y categoría.</span></li>
+        <li><strong>Adjunta</strong><span>Sube un PDF, PNG o JPG de hasta 10 MB, o importa desde OneDrive.</span></li>
+        <li><strong>Organiza</strong><span>Filtra por talleres, laboratorios, parciales o proyectos.</span></li>
+        <li><strong>Revisa</strong><span>Usa la vista de evaluación para consultar todas las entregas.</span></li>
+      </ol>
+      <div class="modal-actions">
+        <button class="btn btn-primary" id="btn-help-understood" type="button">Entendido</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay hidden" id="onedrive-modal" role="dialog" aria-modal="true" aria-labelledby="onedrive-title">
+    <div class="modal-box onedrive-box">
+      <div class="modal-heading">
+        <div><p class="eyebrow">Microsoft 365</p><h3 id="onedrive-title">Seleccionar archivo de OneDrive</h3></div>
+        <button class="icon-button modal-close" type="button" id="btn-onedrive-close" aria-label="Cerrar OneDrive">×</button>
+      </div>
+      <p class="modal-intro">Selecciona un archivo para usarlo como evidencia. El archivo original permanecerá en OneDrive.</p>
+      <div class="onedrive-list" id="onedrive-list" aria-live="polite"></div>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" id="btn-onedrive-cancel" type="button">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
   <div class="toast-container" id="toast-container" aria-live="polite"></div>
+  <script src="https://alcdn.msauth.net/browser/2.38.3/js/msal-browser.min.js" defer></script>
   <script src="app.js"></script>
 </body>
 
