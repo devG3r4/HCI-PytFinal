@@ -36,7 +36,7 @@
   };
 
   // ---------- Estado ----------
-  let evidences = loadEvidences();
+  let evidences = [];
   let currentFilter = "Todas";
   let searchQuery = "";
   let selectedEvidenceId = null;
@@ -84,30 +84,33 @@
   };
 
   // ==========================================================
-  //  PERSISTENCIA (LocalStorage)
+  //  SINCRONIZACIÓN EN TIEMPO REAL (Firebase)
   // ==========================================================
-  function loadEvidences() {
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      const parsed = raw ? JSON.parse(raw) : [];
-      return Array.isArray(parsed)
-        ? parsed.map((evidence) => ({
-            ...evidence,
-            unit: LEGACY_UNIT_MAP[evidence.unit] || evidence.unit,
-          }))
-        : [];
-    } catch {
-      return [];
-    }
-  }
+  const firebaseConfig = {
+    apiKey: "AIzaSyBi_v2l11vhBt1mhCfFc12jMlkhGaEIYYc",
+    authDomain: "portafolio-hci.firebaseapp.com",
+    databaseURL: "https://portafolio-hci-default-rtdb.firebaseio.com",
+    projectId: "portafolio-hci",
+    storageBucket: "portafolio-hci.firebasestorage.app",
+    messagingSenderId: "703227404068",
+    appId: "1:703227404068:web:58f25326fecf9aa69e9db1"
+  };
 
-  function saveEvidences() {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(evidences));
-    } catch {
-      showToast("No se pudieron guardar los cambios en este navegador.", "danger");
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+
+  db.ref("evidencias").on("value", (snapshot) => {
+    const data = snapshot.val();
+    evidences = [];
+    if (data) {
+      Object.keys(data).forEach((key) => {
+        evidences.push({ id: key, ...data[key] });
+      });
+      // Ordenar por más recientes primero
+      evidences.sort((a, b) => b.id - a.id);
     }
-  }
+    refreshCurrentView();
+  });
 
   // ==========================================================
   //  ARCHIVOS ADJUNTOS (Cloudinary)
@@ -588,33 +591,22 @@
     }
 
     if (editingId !== null) {
-      // UPDATE — conserva el archivo previo si no se subió uno nuevo
-      const evidence = evidences.find((e) => e.id === editingId);
-      Object.assign(evidence, data);
-      showToast(
-        uploadErrorMessage
-          ? `Evidencia actualizada; el archivo anterior se conservó. ${uploadErrorMessage}`
-          : "Evidencia actualizada con éxito.",
-        uploadErrorMessage ? "danger" : "info"
-      );
+      // UPDATE
+      db.ref("evidencias/" + editingId).update(data);
+      showToast("Evidencia actualizada con éxito.", "info");
     } else {
       // CREATE
-      evidences.unshift({
-        id: Date.now(),
+      const newId = Date.now();
+      const newEvidence = {
+        id: newId,
         ...data,
         createdAt: formatDate(new Date()),
-      });
-      showToast(
-        uploadErrorMessage
-          ? `Evidencia guardada sin archivo. ${uploadErrorMessage}`
-          : "Evidencia guardada con éxito.",
-        uploadErrorMessage ? "danger" : "success"
-      );
+      };
+      db.ref("evidencias/" + newId).set(newEvidence);
+      showToast("Evidencia guardada con éxito.", "success");
     }
 
-    saveEvidences();
     closeForm();
-    refreshCurrentView();
   }
 
   function formatDate(d) {
@@ -632,12 +624,10 @@
 
   function confirmDelete() {
     if (pendingDeleteId === null) return;
-    evidences = evidences.filter((e) => e.id !== pendingDeleteId);
+    db.ref("evidencias/" + pendingDeleteId).remove();
     if (selectedEvidenceId === pendingDeleteId) selectedEvidenceId = null;
     pendingDeleteId = null;
-    saveEvidences();
     closeConfirm();
-    refreshCurrentView();
     showToast("Evidencia eliminada.", "danger");
   }
 
@@ -834,17 +824,8 @@
   });
 
   // ==========================================================
-  //  DATOS DE EJEMPLO — solo en el primer uso
+  //  DATOS (Obtenidos de Firebase)
   // ==========================================================
-  if (localStorage.getItem(STORAGE_KEY) === null) {
-    evidences = [
-      { id: 1, title: "Taller de heurísticas de Nielsen", description: "Resumen de las 10 heurísticas de usabilidad con ejemplos en apps móviles.", unit: "Talleres", createdAt: "01 jul. 2026" },
-      { id: 2, title: "Laboratorio de Card Sorting", description: "Resultados de la sesión de card sorting abierto con 8 participantes.", unit: "Laboratorios", createdAt: "03 jul. 2026" },
-      { id: 3, title: "Proyecto de prototipo de baja fidelidad", description: "Wireframes en papel de la pantalla principal con anotaciones de feedback.", unit: "Proyectos", createdAt: "05 jul. 2026" },
-      { id: 4, title: "Parcial de test de usabilidad", description: "Guion y hallazgos de 5 pruebas con usuarios sobre el flujo de registro.", unit: "Parciales", createdAt: "06 jul. 2026" },
-    ];
-    saveEvidences();
-  }
 
   // ==========================================================
   //  ARRANQUE
