@@ -1,0 +1,466 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/zseir6",
+    "id": "zseir6",
+    "slide": 10,
+    "layoutId": "cc480d31-7448-4d1f-940d-e8ca5d253c84",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "46a4c2b8-6d0f-4a97-935d-efbaf57cc1a7",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#0B2545",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "cc480d31-7448-4d1f-940d-e8ca5d253c84",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "46a4c2b8-6d0f-4a97-935d-efbaf57cc1a7",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "46a4c2b8-6d0f-4a97-935d-efbaf57cc1a7",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/50rmhwru",
+      "id": "1",
+      "bbox": [
+        72,
+        70,
+        220,
+        24
+      ],
+      "geometry": "rect",
+      "text": "CIERRE",
+      "textPreview": "CIERRE",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#D9FF43",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CIERRE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CIERRE",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#D9FF43",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "CIERRE",
+              "fontSize": 15,
+              "color": "#D9FF43",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ix0361sj",
+      "id": "2",
+      "bbox": [
+        72,
+        170,
+        750,
+        150
+      ],
+      "geometry": "rect",
+      "text": "Una bitácora que se entiende\nantes de explicarse.",
+      "textPreview": "Una bitácora que se entiende | antes de explicarse.",
+      "resolvedFontSize": 52,
+      "resolvedTextStyle": {
+        "fontSize": 52,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Una bitácora que se entiende"
+          },
+          {
+            "index": 2,
+            "text": "antes de explicarse."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Una bitácora que se entiende",
+          "resolvedTextStyle": {
+            "fontSize": 52,
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Una bitácora que se entiende",
+              "fontSize": 52,
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "antes de explicarse.",
+          "resolvedTextStyle": {
+            "fontSize": 52,
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "antes de explicarse.",
+              "fontSize": 52,
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jy94fm9o",
+      "id": "3",
+      "bbox": [
+        76,
+        370,
+        650,
+        76
+      ],
+      "geometry": "rect",
+      "text": "La solución entrega un sistema funcional, evidencia del proceso y una siguiente iteración concreta: validar con estudiantes.",
+      "textPreview": "La solución entrega un sistema funcional, evidencia del proceso y una siguiente iteración concreta: validar con estudiantes.",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "color": "#C9D1DC",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "La solución entrega un sistema funcional, evidencia del"
+          },
+          {
+            "index": 2,
+            "text": "proceso y una siguiente iteración concreta: validar con"
+          },
+          {
+            "index": 3,
+            "text": "estudiantes."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "La solución entrega un sistema funcional, evidencia del proceso y una siguiente iteración concreta: validar con estudiantes.",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "color": "#C9D1DC"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "La solución entrega un sistema funcional, evidencia del proceso y una siguiente iteración concreta: validar con estudiantes.",
+              "fontSize": 23,
+              "color": "#C9D1DC"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wvyl4rad",
+      "id": "4",
+      "bbox": [
+        850,
+        176,
+        250,
+        250
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#D9FF43",
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xwrmdwry",
+      "id": "5",
+      "bbox": [
+        880,
+        244,
+        190,
+        92
+      ],
+      "geometry": "rect",
+      "text": "registrar\n→ encontrar\n→ revisar",
+      "textPreview": "registrar | → encontrar | → revisar",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "fontSize": 26,
+        "typeface": "+mn-lt",
+        "color": "#0B2545",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "registrar"
+          },
+          {
+            "index": 2,
+            "text": "→ encontrar"
+          },
+          {
+            "index": 3,
+            "text": "→ revisar"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "registrar",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "color": "#0B2545",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "registrar",
+              "fontSize": 26,
+              "color": "#0B2545",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "→ encontrar",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "color": "#0B2545",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "→ encontrar",
+              "fontSize": 26,
+              "color": "#0B2545",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "→ revisar",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "color": "#0B2545",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "→ revisar",
+              "fontSize": 26,
+              "color": "#0B2545",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/atg32hs7",
+      "id": "6",
+      "bbox": [
+        76,
+        615,
+        300,
+        28
+      ],
+      "geometry": "rect",
+      "text": "Preguntas",
+      "textPreview": "Preguntas",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "color": "#D9FF43",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Preguntas"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Preguntas",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "color": "#D9FF43",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Preguntas",
+              "fontSize": 22,
+              "color": "#D9FF43",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

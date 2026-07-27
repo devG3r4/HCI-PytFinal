@@ -1,0 +1,4 @@
+.claude/
+markdowns/
+.venv-markitdown/
+*.zip

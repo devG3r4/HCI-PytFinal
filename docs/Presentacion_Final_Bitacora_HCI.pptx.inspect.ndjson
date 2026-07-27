@@ -1,0 +1,198 @@
+{"kind":"deck","id":"pr/kxvmuf","name":"Deck"}
+{"kind":"layout","layoutId":"46a4c2b8-6d0f-4a97-935d-efbaf57cc1a7","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"cc480d31-7448-4d1f-940d-e8ca5d253c84","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/xuaraj","slide":1,"title":"PROYECTO FINAL · HCI","textShapes":7}
+{"kind":"textbox","id":"sh/bypcr29g","slide":1,"text":"PROYECTO FINAL · HCI","textPreview":"PROYECTO FINAL · HCI","textChars":20,"textLines":1,"bbox":[72,68,440,28]}
+{"kind":"textbox","id":"sh/cjid07a1","slide":1,"text":"Bitácora Digital","textPreview":"Bitácora Digital","textChars":16,"textLines":1,"bbox":[72,190,780,92]}
+{"kind":"textbox","id":"sh/dkrutcrm","slide":1,"text":"Un portafolio para reunir, encontrar y revisar las evidencias del curso.","textPreview":"Un portafolio para reunir, encontrar y revisar las evidencias del curso.","textChars":72,"textLines":1,"bbox":[76,304,690,70]}
+{"kind":"shape","id":"sh/2tgbuxsz","slide":1,"bbox":[76,410,570,70]}
+{"kind":"textbox","id":"sh/3upcn294","slide":1,"text":"La interfaz convierte archivos dispersos en una bitácora que se puede entender y demostrar.","textPreview":"La interfaz convierte archivos dispersos en una bitácora que se puede entender y demostrar.","textChars":91,"textLines":1,"bbox":[98,428,520,34]}
+{"kind":"shape","id":"sh/ovytw7ap","slide":1,"bbox":[835,144,330,430]}
+{"kind":"shape","id":"sh/pw7upsra","slide":1,"bbox":[860,172,280,44]}
+{"kind":"textbox","id":"sh/upwbqdsn","slide":1,"text":"Portafolio HCI","textPreview":"Portafolio HCI","textChars":14,"textLines":1,"bbox":[882,186,150,20]}
+{"kind":"shape","id":"sh/fq5cji98","slide":1,"bbox":[860,252,280,218]}
+{"kind":"textbox","id":"sh/vudcv6tg","slide":1,"text":"Arrastra aquí una\n evidencia para subirla","textPreview":"Arrastra aquí una |  evidencia para subirla","textChars":41,"textLines":2,"bbox":[892,332,220,64]}
+{"kind":"shape","id":"sh/ut4v21cv","slide":1,"bbox":[892,420,216,14]}
+{"kind":"textbox","id":"sh/hwvuxgbm","slide":1,"text":"Equipo de desarrollo · Julio 2026","textPreview":"Equipo de desarrollo · Julio 2026","textChars":33,"textLines":1,"bbox":[76,638,500,24]}
+{"kind":"notes","id":"nt/xuaraj","slide":1,"text":"Presentar el proyecto como una solución de organización académica, no como una simple galería de archivos.\nLa idea central de la exposición: registrar, encontrar y revisar evidencias desde una misma experiencia.\n\n[Sources]\n- Documento del curso: PROYECTO FINAL DEL CURSO HCI.pdf\n- Repositorio del proyecto: https://github.com/devG3r4/HCI-PytFinal"}
+{"kind":"slide","id":"sl/6m7qqm","slide":2,"title":"BITÁCORA DIGITAL · PROYECTO HCI","textShapes":10}
+{"kind":"textbox","id":"sh/7al83ahw","slide":2,"text":"BITÁCORA DIGITAL · PROYECTO HCI","textPreview":"BITÁCORA DIGITAL · PROYECTO HCI","textChars":31,"textLines":1,"bbox":[52,24,380,22]}
+{"kind":"textbox","id":"sh/8bu9wvyh","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1170,24,54,22]}
+{"kind":"textbox","id":"sh/tc3q50z2","slide":2,"text":"CONTEXTO","textPreview":"CONTEXTO","textChars":8,"textLines":1,"bbox":[52,62,500,20]}
+{"kind":"textbox","id":"sh/y5srqlgf","slide":2,"text":"Las evidencias están dispersas","textPreview":"Las evidencias están dispersas","textChars":30,"textLines":1,"bbox":[52,98,900,72]}
+{"kind":"textbox","id":"sh/z618zqh0","slide":2,"text":"El problema no es solo guardar archivos: es saber qué existe, dónde está y cómo mostrarlo.","textPreview":"El problema no es solo guardar archivos: es saber qué existe, dónde está y cómo mostrarlo.","textChars":90,"textLines":1,"bbox":[54,176,870,44]}
+{"kind":"shape","id":"sh/k7a9svyl","slide":2,"bbox":[64,270,320,260]}
+{"kind":"textbox","id":"sh/l8jq10z6","slide":2,"text":"ANTES","textPreview":"ANTES","textChars":5,"textLines":1,"bbox":[92,296,120,22]}
+{"kind":"textbox","id":"sh/i1wr2pgj","slide":2,"text":"Carpetas locales\nOneDrive\nChats del grupo\nNombres inconsistentes","textPreview":"Carpetas locales | OneDrive | Chats del grupo | Nombres inconsistentes","textChars":64,"textLines":4,"bbox":[92,346,230,130]}
+{"kind":"shape","id":"sh/325sbuh4","slide":2,"bbox":[478,358,144,42]}
+{"kind":"textbox","id":"sh/rul8za5k","slide":2,"text":"organizar","textPreview":"organizar","textChars":9,"textLines":1,"bbox":[506,370,90,20]}
+{"kind":"shape","id":"sh/qtcrq54z","slide":2,"bbox":[712,270,450,260]}
+{"kind":"textbox","id":"sh/dw3q1kna","slide":2,"text":"DESPUÉS","textPreview":"DESPUÉS","textChars":7,"textLines":1,"bbox":[744,296,140,22]}
+{"kind":"textbox","id":"sh/cvu9sfmp","slide":2,"text":"Resumen\nArchivos por categoría\nVista de evaluación","textPreview":"Resumen | Archivos por categoría | Vista de evaluación","textChars":50,"textLines":3,"bbox":[744,346,310,124]}
+{"kind":"notes","id":"nt/6m7qqm","slide":2,"text":"Explicar el costo cotidiano de la dispersión: tiempo perdido y poca claridad al revisar.\nConectar el problema con el brief del curso: organizar y presentar evidencias de forma usable.\n\n[Sources]\n- Documento del curso: PROYECTO FINAL DEL CURSO HCI.pdf\n- Evidencia interna: evidencias/dcu/01-matriz-requisitos.md"}
+{"kind":"slide","id":"sl/28r6aa","slide":3,"title":"BITÁCORA DIGITAL · PROYECTO HCI","textShapes":12}
+{"kind":"textbox","id":"sh/qxcbq98v","slide":3,"text":"BITÁCORA DIGITAL · PROYECTO HCI","textPreview":"BITÁCORA DIGITAL · PROYECTO HCI","textChars":31,"textLines":1,"bbox":[52,24,380,22]}
+{"kind":"textbox","id":"sh/d03u1orm","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1170,24,54,22]}
+{"kind":"textbox","id":"sh/szutsjq1","slide":3,"text":"USUARIO","textPreview":"USUARIO","textChars":7,"textLines":1,"bbox":[52,62,500,20]}
+{"kind":"textbox","id":"sh/f2lc3yps","slide":3,"text":"El estudiante necesita recuperar el control","textPreview":"El estudiante necesita recuperar el control","textChars":43,"textLines":1,"bbox":[52,98,900,72]}
+{"kind":"textbox","id":"sh/e1cbut87","slide":3,"text":"Alex es una proto-persona: una hipótesis explícita que debemos validar con estudiantes reales.","textPreview":"Alex es una proto-persona: una hipótesis explícita que debemos validar con estudiantes reales.","textChars":94,"textLines":1,"bbox":[54,176,870,44]}
+{"kind":"shape","id":"sh/14nu587i","slide":3,"bbox":[70,258,350,285]}
+{"kind":"shape","id":"sh/03etw3qd","slide":3,"bbox":[100,292,84,84]}
+{"kind":"textbox","id":"sh/nq5c7ypo","slide":3,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[126,310,34,40]}
+{"kind":"textbox","id":"sh/2pwbyt83","slide":3,"text":"Alex · estudiante universitario","textPreview":"Alex · estudiante universitario","textChars":31,"textLines":1,"bbox":[100,412,250,28]}
+{"kind":"textbox","id":"sh/kjalsvy1","slide":3,"text":"Trabaja con entregas repartidas entre su computadora, la nube y el chat del grupo.","textPreview":"Trabaja con entregas repartidas entre su computadora, la nube y el chat del grupo.","textChars":82,"textLines":1,"bbox":[100,456,260,58]}
+{"kind":"shape","id":"sh/lkj2l0fm","slide":3,"bbox":[506,258,300,285]}
+{"kind":"textbox","id":"sh/yh83qlgv","slide":3,"text":"Necesita","textPreview":"Necesita","textChars":8,"textLines":1,"bbox":[538,292,180,24]}
+{"kind":"textbox","id":"sh/zi1kjqxg","slide":3,"text":"• nombres claros\n• categorías visibles\n• búsqueda rápida\n• feedback de guardado","textPreview":"• nombres claros | • categorías visibles | • búsqueda rápida | • feedback de guardado","textChars":79,"textLines":4,"bbox":[538,338,210,120]}
+{"kind":"shape","id":"sh/8nalwfyd","slide":3,"bbox":[892,258,300,285]}
+{"kind":"textbox","id":"sh/9oj2pkfi","slide":3,"text":"Pregunta de diseño","textPreview":"Pregunta de diseño","textChars":18,"textLines":1,"bbox":[924,292,220,24]}
+{"kind":"textbox","id":"sh/mls3u5g7","slide":3,"text":"¿Puede registrar y volver a encontrar una evidencia sin aprender una estructura complicada?","textPreview":"¿Puede registrar y volver a encontrar una evidencia sin aprender una estructura complicada?","textChars":91,"textLines":1,"bbox":[924,342,220,124]}
+{"kind":"notes","id":"nt/28r6aa","slide":3,"text":"Aclarar que la proto-persona es una hipótesis basada en el contexto académico, no una entrevista inventada.\nLa prueba con participantes reales debe confirmar o corregir estas necesidades.\n\n[Sources]\n- Evidencia interna: evidencias/dcu/02-proto-persona.md\n- Documento del curso: PROYECTO FINAL DEL CURSO HCI.pdf"}
+{"kind":"slide","id":"sl/2nckkd","slide":4,"title":"BITÁCORA DIGITAL · PROYECTO HCI","textShapes":21}
+{"kind":"textbox","id":"sh/187ytwvm","slide":4,"text":"BITÁCORA DIGITAL · PROYECTO HCI","textPreview":"BITÁCORA DIGITAL · PROYECTO HCI","textChars":31,"textLines":1,"bbox":[52,24,380,22]}
+{"kind":"textbox","id":"sh/e5gfy1wv","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1170,24,54,22]}
+{"kind":"textbox","id":"sh/z6pgrmdg","slide":4,"text":"PROCESO DCU","textPreview":"PROCESO DCU","textChars":11,"textLines":1,"bbox":[52,62,500,20]}
+{"kind":"textbox","id":"sh/c3exwrep","slide":4,"text":"Cada decisión responde a una necesidad","textPreview":"Cada decisión responde a una necesidad","textChars":38,"textLines":1,"bbox":[52,98,900,72]}
+{"kind":"textbox","id":"sh/d47ypwva","slide":4,"text":"El proceso combina trazabilidad, revisión experta y una prueba con usuarios que el grupo debe completar.","textPreview":"El proceso combina trazabilidad, revisión experta y una prueba con usuarios que el grupo debe completar.","textChars":104,"textLines":1,"bbox":[54,176,870,44]}
+{"kind":"shape","id":"sh/q1wfuhwz","slide":4,"bbox":[78,315,188,136]}
+{"kind":"textbox","id":"sh/r25gnmxk","slide":4,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[96,334,40,24]}
+{"kind":"textbox","id":"sh/wzih8be9","slide":4,"text":"Brief","textPreview":"Brief","textChars":5,"textLines":1,"bbox":[96,370,150,24]}
+{"kind":"textbox","id":"sh/x0ry1gvu","slide":4,"text":"Requisitos del curso","textPreview":"Requisitos del curso","textChars":20,"textLines":1,"bbox":[96,405,150,35]}
+{"kind":"shape","id":"sh/9kfitsr2","slide":4,"bbox":[266,383,42,0]}
+{"kind":"shape","id":"sh/8j6hknqh","slide":4,"bbox":[308,315,188,136]}
+{"kind":"textbox","id":"sh/7ix0ri9c","slide":4,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[326,334,40,24]}
+{"kind":"textbox","id":"sh/mhozid8r","slide":4,"text":"Hipótesis","textPreview":"Hipótesis","textChars":9,"textLines":1,"bbox":[326,370,150,24]}
+{"kind":"textbox","id":"sh/lgfipsr6","slide":4,"text":"Proto-persona y necesidades","textPreview":"Proto-persona y necesidades","textChars":27,"textLines":1,"bbox":[326,405,150,35]}
+{"kind":"shape","id":"sh/kv6hgnql","slide":4,"bbox":[496,383,42,0]}
+{"kind":"shape","id":"sh/zux0ni90","slide":4,"bbox":[538,315,188,136]}
+{"kind":"textbox","id":"sh/ytozed8f","slide":4,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[556,334,40,24]}
+{"kind":"textbox","id":"sh/5cji1cra","slide":4,"text":"Arquitectura","textPreview":"Arquitectura","textChars":12,"textLines":1,"bbox":[556,370,150,24]}
+{"kind":"textbox","id":"sh/4rq1s7qp","slide":4,"text":"Resumen · archivos · evaluación","textPreview":"Resumen · archivos · evaluación","textChars":31,"textLines":1,"bbox":[556,405,150,35]}
+{"kind":"shape","id":"sh/4vy14vy1","slide":4,"bbox":[726,383,42,0]}
+{"kind":"shape","id":"sh/pwr2xgfm","slide":4,"bbox":[768,315,188,136]}
+{"kind":"textbox","id":"sh/2tgj2lgv","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[786,334,40,24]}
+{"kind":"textbox","id":"sh/3upkvqxg","slide":4,"text":"Revisión","textPreview":"Revisión","textChars":8,"textLines":1,"bbox":[786,370,150,24]}
+{"kind":"textbox","id":"sh/gry10by5","slide":4,"text":"Heurísticas y recorrido cognitivo","textPreview":"Heurísticas y recorrido cognitivo","textChars":33,"textLines":1,"bbox":[786,405,150,35]}
+{"kind":"shape","id":"sh/hs72tgfa","slide":4,"bbox":[956,383,42,0]}
+{"kind":"shape","id":"sh/upgjy1gz","slide":4,"bbox":[998,315,188,136]}
+{"kind":"textbox","id":"sh/fqpkr6xk","slide":4,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1016,334,40,24]}
+{"kind":"textbox","id":"sh/sne1wbyt","slide":4,"text":"Validación","textPreview":"Validación","textChars":10,"textLines":1,"bbox":[1016,370,150,24]}
+{"kind":"textbox","id":"sh/ton2pwfe","slide":4,"text":"Prueba con participantes reales","textPreview":"Prueba con participantes reales","textChars":31,"textLines":1,"bbox":[1016,405,150,35]}
+{"kind":"textbox","id":"sh/vy5kzm10","slide":4,"text":"Artefactos: matriz · wireframes · evaluación heurística · recorrido cognitivo · instrumento de prueba","textPreview":"Artefactos: matriz · wireframes · evaluación heurística · recorrido cognitivo · instrumento de prueba","textChars":101,"textLines":1,"bbox":[160,525,960,26]}
+{"kind":"notes","id":"nt/2nckkd","slide":4,"text":"Recorrer la cadena sin presentar una lista aislada: cada etapa produce la siguiente.\nLa última etapa está preparada, pero requiere observación real del grupo.\n\n[Sources]\n- Evidencia interna: evidencias/dcu/01-matriz-requisitos.md\n- Evidencia interna: evidencias/dcu/03-arquitectura-informacion.md\n- Evidencia interna: evidencias/dcu/04-evaluacion-heuristica.md\n- Evidencia interna: evidencias/dcu/06-instrumento-prueba-usuarios.md"}
+{"kind":"slide","id":"sl/j3ia8r","slide":5,"title":"BITÁCORA DIGITAL · PROYECTO HCI","textShapes":12}
+{"kind":"textbox","id":"sh/ny583u9s","slide":5,"text":"BITÁCORA DIGITAL · PROYECTO HCI","textPreview":"BITÁCORA DIGITAL · PROYECTO HCI","textChars":31,"textLines":1,"bbox":[52,24,380,22]}
+{"kind":"textbox","id":"sh/oje9czqd","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1170,24,54,22]}
+{"kind":"textbox","id":"sh/9knq54ry","slide":5,"text":"ARQUITECTURA","textPreview":"ARQUITECTURA","textChars":12,"textLines":1,"bbox":[52,62,500,20]}
+{"kind":"textbox","id":"sh/etc76p8b","slide":5,"text":"La navegación sigue el trabajo del estudiante","textPreview":"La navegación sigue el trabajo del estudiante","textChars":45,"textLines":1,"bbox":[52,98,900,72]}
+{"kind":"textbox","id":"sh/zul8za9w","slide":5,"text":"Primero iniciar, después encontrar y por último revisar.","textPreview":"Primero iniciar, después encontrar y por último revisar.","textChars":56,"textLines":1,"bbox":[54,176,870,44]}
+{"kind":"shape","id":"sh/0vup8fqh","slide":5,"bbox":[72,270,260,210]}
+{"kind":"textbox","id":"sh/1w3q1kr2","slide":5,"text":"RESUMEN","textPreview":"RESUMEN","textChars":7,"textLines":1,"bbox":[100,300,120,22]}
+{"kind":"textbox","id":"sh/ypgri98f","slide":5,"text":"¿Por dónde\nempiezo?","textPreview":"¿Por dónde | empiezo?","textChars":19,"textLines":2,"bbox":[100,352,180,72]}
+{"kind":"shape","id":"sh/jqp8be90","slide":5,"bbox":[480,270,260,210]}
+{"kind":"textbox","id":"sh/jmlsby90","slide":5,"text":"ARCHIVOS","textPreview":"ARCHIVOS","textChars":8,"textLines":1,"bbox":[508,300,120,22]}
+{"kind":"textbox","id":"sh/ilcbitsf","slide":5,"text":"¿Dónde está\ny qué hago?","textPreview":"¿Dónde está | y qué hago?","textChars":23,"textLines":2,"bbox":[508,352,180,72]}
+{"kind":"shape","id":"sh/58nad8r6","slide":5,"bbox":[888,270,260,210]}
+{"kind":"textbox","id":"sh/k7etk3al","slide":5,"text":"EVALUACIÓN","textPreview":"EVALUACIÓN","textChars":10,"textLines":1,"bbox":[916,300,160,22]}
+{"kind":"textbox","id":"sh/7a5sfi9w","slide":5,"text":"¿Qué debo\nrevisar?","textPreview":"¿Qué debo | revisar?","textChars":18,"textLines":2,"bbox":[916,352,180,72]}
+{"kind":"shape","id":"sh/69wbmdsb","slide":5,"bbox":[332,376,148,0]}
+{"kind":"shape","id":"sh/tcnah8r2","slide":5,"bbox":[740,376,148,0]}
+{"kind":"textbox","id":"sh/sbetonah","slide":5,"text":"Categorías compartidas: Talleres · Laboratorios · Parciales · Proyectos","textPreview":"Categorías compartidas: Talleres · Laboratorios · Parciales · Proyectos","textChars":71,"textLines":1,"bbox":[244,548,800,28]}
+{"kind":"notes","id":"nt/j3ia8r","slide":5,"text":"Mostrar que la arquitectura no replica una carpeta genérica: responde a tres intenciones distintas.\nLa misma categoría aparece en filtros y evaluación para preservar consistencia.\n\n[Sources]\n- Evidencia interna: evidencias/dcu/03-arquitectura-informacion.md\n- Evidencia interna: evidencias/wireframes/README.md"}
+{"kind":"slide","id":"sl/auq7ww","slide":6,"title":"BITÁCORA DIGITAL · PROYECTO HCI","textShapes":7}
+{"kind":"textbox","id":"sh/i18fi1oj","slide":6,"text":"BITÁCORA DIGITAL · PROYECTO HCI","textPreview":"BITÁCORA DIGITAL · PROYECTO HCI","textChars":31,"textLines":1,"bbox":[52,24,380,22]}
+{"kind":"textbox","id":"sh/54zydwna","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1170,24,54,22]}
+{"kind":"textbox","id":"sh/43qxkr6p","slide":6,"text":"INTERFAZ","textPreview":"INTERFAZ","textChars":8,"textLines":1,"bbox":[52,62,500,20]}
+{"kind":"textbox","id":"sh/r6hgf650","slide":6,"text":"La interfaz hace visible cada acción","textPreview":"La interfaz hace visible cada acción","textChars":36,"textLines":1,"bbox":[52,98,900,72]}
+{"kind":"textbox","id":"sh/q58zm1ov","slide":6,"text":"Tema oscuro para trabajar; tema claro para revisar en formato de lista.","textPreview":"Tema oscuro para trabajar; tema claro para revisar en formato de lista.","textChars":71,"textLines":1,"bbox":[54,176,870,44]}
+{"kind":"textbox","id":"sh/7axg325w","slide":6,"text":"Tema oscuro · iniciar y registrar","textPreview":"Tema oscuro · iniciar y registrar","textChars":33,"textLines":1,"bbox":[70,620,548,24]}
+{"kind":"textbox","id":"sh/694fahob","slide":6,"text":"Tema claro · revisar y comparar","textPreview":"Tema claro · revisar y comparar","textChars":31,"textLines":1,"bbox":[662,620,548,24]}
+{"kind":"image","id":"im/8vq9krq1","slide":6,"name":"","geometry":"roundRect","alt":"Resumen oscuro con zona de carga","bbox":[70,262,548,344]}
+{"kind":"image","id":"im/9wzadw7m","slide":6,"name":"","geometry":"roundRect","alt":"Vista clara de lista de archivos","bbox":[662,262,548,344]}
+{"kind":"notes","id":"nt/auq7ww","slide":6,"text":"Usar las dos capturas para explicar la relación entre tema y tarea, no como una demostración de decoración.\nSeñalar la zona de carga, los filtros, el feedback y la tabla de revisión.\n\n[Sources]\n- Capturas verificadas: evidencias/capturas/01-resumen.png y evidencias/capturas/05-tema-claro.png\n- Código: index.html y styles.css"}
+{"kind":"slide","id":"sl/gd1mpe","slide":7,"title":"BITÁCORA DIGITAL · PROYECTO HCI","textShapes":14}
+{"kind":"textbox","id":"sh/cze9ovax","slide":7,"text":"BITÁCORA DIGITAL · PROYECTO HCI","textPreview":"BITÁCORA DIGITAL · PROYECTO HCI","textChars":31,"textLines":1,"bbox":[52,24,380,22]}
+{"kind":"textbox","id":"sh/be58fqtc","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1170,24,54,22]}
+{"kind":"textbox","id":"sh/qdwrmlcr","slide":7,"text":"FUNCIONALIDAD","textPreview":"FUNCIONALIDAD","textChars":13,"textLines":1,"bbox":[52,62,500,20]}
+{"kind":"textbox","id":"sh/pc3qdgb6","slide":7,"text":"El prototipo cubre el ciclo de una evidencia","textPreview":"El prototipo cubre el ciclo de una evidencia","textChars":44,"textLines":1,"bbox":[52,98,900,72]}
+{"kind":"textbox","id":"sh/obu9kbul","slide":7,"text":"Registrar → organizar → encontrar → revisar.","textPreview":"Registrar → organizar → encontrar → revisar.","textChars":44,"textLines":1,"bbox":[54,176,870,44]}
+{"kind":"shape","id":"sh/3al8b6t0","slide":7,"bbox":[72,282,248,178]}
+{"kind":"shape","id":"sh/29crilcv","slide":7,"bbox":[72,282,248,10]}
+{"kind":"textbox","id":"sh/183q9gba","slide":7,"text":"Registrar","textPreview":"Registrar","textChars":9,"textLines":1,"bbox":[96,324,200,30]}
+{"kind":"textbox","id":"sh/g7u9gbup","slide":7,"text":"Título, descripción, categoría y adjunto","textPreview":"Título, descripción, categoría y adjunto","textChars":40,"textLines":1,"bbox":[96,374,190,58]}
+{"kind":"shape","id":"sh/e9ovytoz","slide":7,"bbox":[358,282,248,178]}
+{"kind":"shape","id":"sh/fahw7ypk","slide":7,"bbox":[358,282,248,10]}
+{"kind":"textbox","id":"sh/gbqd0365","slide":7,"text":"Organizar","textPreview":"Organizar","textChars":9,"textLines":1,"bbox":[382,324,200,30]}
+{"kind":"textbox","id":"sh/1cze987q","slide":7,"text":"Filtros por tipo y movimiento entre categorías","textPreview":"Filtros por tipo y movimiento entre categorías","textChars":46,"textLines":1,"bbox":[382,374,190,58]}
+{"kind":"shape","id":"sh/6lovuto3","slide":7,"bbox":[644,282,248,178]}
+{"kind":"shape","id":"sh/rmxw3epo","slide":7,"bbox":[644,282,248,10]}
+{"kind":"textbox","id":"sh/sn6dwj69","slide":7,"text":"Encontrar","textPreview":"Encontrar","textChars":9,"textLines":1,"bbox":[668,324,200,30]}
+{"kind":"textbox","id":"sh/tofe5o7e","slide":7,"text":"Búsqueda global y acceso rápido","textPreview":"Búsqueda global y acceso rápido","textChars":31,"textLines":1,"bbox":[668,374,190,58]}
+{"kind":"shape","id":"sh/ih4vq9or","slide":7,"bbox":[930,282,248,178]}
+{"kind":"shape","id":"sh/jidczepc","slide":7,"bbox":[930,282,248,10]}
+{"kind":"textbox","id":"sh/na9kb618","slide":7,"text":"Revisar","textPreview":"Revisar","textChars":7,"textLines":1,"bbox":[954,324,200,30]}
+{"kind":"textbox","id":"sh/m90jil0n","slide":7,"text":"Tabla de evaluación y enlace al archivo","textPreview":"Tabla de evaluación y enlace al archivo","textChars":39,"textLines":1,"bbox":[954,374,190,58]}
+{"kind":"shape","id":"sh/9cr2dgjy","slide":7,"bbox":[72,516,1080,72]}
+{"kind":"textbox","id":"sh/8bi1kbid","slide":7,"text":"También incluye: validación de archivos · confirmación antes de eliminar · duplicar · ayuda integrada · atajo Ctrl/Cmd + K","textPreview":"También incluye: validación de archivos · confirmación antes de eliminar · duplicar · ayuda integrada · atajo Ctrl/Cmd + K","textChars":122,"textLines":1,"bbox":[104,540,1010,26]}
+{"kind":"notes","id":"nt/gd1mpe","slide":7,"text":"Demostrar un recorrido corto en vivo: registrar un laboratorio, filtrar y abrir Evaluación.\nLa función de nube es opcional y no bloquea el flujo principal.\n\n[Sources]\n- Código: app.js\n- Prueba: tests/ui-smoke.mjs"}
+{"kind":"slide","id":"sl/kmydk3","slide":8,"title":"BITÁCORA DIGITAL · PROYECTO HCI","textShapes":23}
+{"kind":"textbox","id":"sh/7ux8vu9o","slide":8,"text":"BITÁCORA DIGITAL · PROYECTO HCI","textPreview":"BITÁCORA DIGITAL · PROYECTO HCI","textChars":31,"textLines":1,"bbox":[52,24,380,22]}
+{"kind":"textbox","id":"sh/sv694za9","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1170,24,54,22]}
+{"kind":"textbox","id":"sh/tgfax4ru","slide":8,"text":"DECISIONES HCI","textPreview":"DECISIONES HCI","textChars":14,"textLines":1,"bbox":[52,62,500,20]}
+{"kind":"textbox","id":"sh/uhor69sf","slide":8,"text":"La revisión heurística produce correcciones","textPreview":"La revisión heurística produce correcciones","textChars":43,"textLines":1,"bbox":[52,98,900,72]}
+{"kind":"textbox","id":"sh/fixsze90","slide":8,"text":"La interfaz no solo se diseñó: se revisó contra errores previsibles.","textPreview":"La interfaz no solo se diseñó: se revisó contra errores previsibles.","textChars":68,"textLines":1,"bbox":[54,176,870,44]}
+{"kind":"shape","id":"sh/gj69sjql","slide":8,"bbox":[72,260,1136,56]}
+{"kind":"textbox","id":"sh/hkza1orq","slide":8,"text":"HEURÍSTICA","textPreview":"HEURÍSTICA","textChars":10,"textLines":1,"bbox":[98,278,230,22]}
+{"kind":"textbox","id":"sh/2l8ru98b","slide":8,"text":"DECISIÓN DE DISEÑO","textPreview":"DECISIÓN DE DISEÑO","textChars":18,"textLines":1,"bbox":[352,278,330,22]}
+{"kind":"textbox","id":"sh/3mhs3e9w","slide":8,"text":"IMPACTO","textPreview":"IMPACTO","textChars":7,"textLines":1,"bbox":[866,278,220,22]}
+{"kind":"shape","id":"sh/zql4n6h4","slide":8,"bbox":[72,380,1136,0]}
+{"kind":"textbox","id":"sh/ypsnul0j","slide":8,"text":"Estado visible","textPreview":"Estado visible","textChars":14,"textLines":1,"bbox":[98,338,230,26]}
+{"kind":"textbox","id":"sh/ls3mpgzu","slide":8,"text":"Toasts, conteos y fecha","textPreview":"Toasts, conteos y fecha","textChars":23,"textLines":1,"bbox":[352,338,440,26]}
+{"kind":"textbox","id":"sh/kru5wbi9","slide":8,"text":"El usuario sabe qué ocurrió","textPreview":"El usuario sabe qué ocurrió","textChars":27,"textLines":1,"bbox":[866,338,300,26]}
+{"kind":"shape","id":"sh/bm14j61s","slide":8,"bbox":[72,442,1136,0]}
+{"kind":"textbox","id":"sh/a1snq107","slide":8,"text":"Prevención","textPreview":"Prevención","textChars":10,"textLines":1,"bbox":[98,400,230,26]}
+{"kind":"textbox","id":"sh/xojmlgzy","slide":8,"text":"Validación + confirmación","textPreview":"Validación + confirmación","textChars":25,"textLines":1,"bbox":[352,400,440,26]}
+{"kind":"textbox","id":"sh/cna5sbid","slide":8,"text":"Menos errores destructivos","textPreview":"Menos errores destructivos","textChars":26,"textLines":1,"bbox":[866,400,300,26]}
+{"kind":"shape","id":"sh/vi5ovqhw","slide":8,"bbox":[72,504,1136,0]}
+{"kind":"textbox","id":"sh/uxcn250r","slide":8,"text":"Consistencia","textPreview":"Consistencia","textChars":12,"textLines":1,"bbox":[98,462,230,26]}
+{"kind":"textbox","id":"sh/6dg7u9kz","slide":8,"text":"Categorías y lenguaje en español","textPreview":"Categorías y lenguaje en español","textChars":32,"textLines":1,"bbox":[352,462,440,26]}
+{"kind":"textbox","id":"sh/rep83u14","slide":8,"text":"Menos esfuerzo de interpretación","textPreview":"Menos esfuerzo de interpretación","textChars":32,"textLines":1,"bbox":[866,462,300,26]}
+{"kind":"shape","id":"sh/sfypwz2p","slide":8,"bbox":[72,566,1136,0]}
+{"kind":"textbox","id":"sh/tg7qp4ja","slide":8,"text":"Flexibilidad","textPreview":"Flexibilidad","textChars":12,"textLines":1,"bbox":[98,524,230,26]}
+{"kind":"textbox","id":"sh/eh0ry9kv","slide":8,"text":"Búsqueda, drag & drop y atajo","textPreview":"Búsqueda, drag & drop y atajo","textChars":29,"textLines":1,"bbox":[352,524,440,26]}
+{"kind":"textbox","id":"sh/fi98re1g","slide":8,"text":"Más de una forma de completar","textPreview":"Más de una forma de completar","textChars":29,"textLines":1,"bbox":[866,524,300,26]}
+{"kind":"shape","id":"sh/gji90j21","slide":8,"bbox":[72,628,1136,0]}
+{"kind":"textbox","id":"sh/1krqtojm","slide":8,"text":"Ayuda","textPreview":"Ayuda","textChars":5,"textLines":1,"bbox":[98,586,230,26]}
+{"kind":"textbox","id":"sh/ulw7m5kr","slide":8,"text":"Guía rápida integrada","textPreview":"Guía rápida integrada","textChars":21,"textLines":1,"bbox":[352,586,440,26]}
+{"kind":"textbox","id":"sh/vm58va1c","slide":8,"text":"Mejor primer uso","textPreview":"Mejor primer uso","textChars":16,"textLines":1,"bbox":[866,586,300,26]}
+{"kind":"notes","id":"nt/kmydk3","slide":8,"text":"Explicar al menos dos correcciones con el patrón problema → decisión → beneficio.\nNo presentar la evaluación heurística como prueba estadística con usuarios.\n\n[Sources]\n- Evidencia interna: evidencias/dcu/04-evaluacion-heuristica.md\n- Evidencia interna: evidencias/dcu/05-recorrido-cognitivo.md"}
+{"kind":"slide","id":"sl/63ts58","slide":9,"title":"BITÁCORA DIGITAL · PROYECTO HCI","textShapes":15}
+{"kind":"textbox","id":"sh/zul8bax8","slide":9,"text":"BITÁCORA DIGITAL · PROYECTO HCI","textPreview":"BITÁCORA DIGITAL · PROYECTO HCI","textChars":31,"textLines":1,"bbox":[52,24,380,22]}
+{"kind":"textbox","id":"sh/kvup4fet","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1170,24,54,22]}
+{"kind":"textbox","id":"sh/lw3qdkfy","slide":9,"text":"VALIDACIÓN","textPreview":"VALIDACIÓN","textChars":10,"textLines":1,"bbox":[52,62,500,20]}
+{"kind":"textbox","id":"sh/mxc76pwj","slide":9,"text":"La prueba técnica confirma el flujo principal","textPreview":"La prueba técnica confirma el flujo principal","textChars":45,"textLines":1,"bbox":[52,98,900,72]}
+{"kind":"textbox","id":"sh/7y58fax4","slide":9,"text":"La siguiente iteración debe comprobar si el flujo también resulta claro para personas reales.","textPreview":"La siguiente iteración debe comprobar si el flujo también resulta claro para personas reales.","textChars":93,"textLines":1,"bbox":[54,176,870,44]}
+{"kind":"shape","id":"sh/8jep8fep","slide":9,"bbox":[80,278,228,152]}
+{"kind":"textbox","id":"sh/9knqhkfa","slide":9,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[102,302,180,58]}
+{"kind":"textbox","id":"sh/ulw7apwv","slide":9,"text":"recorridos automatizados","textPreview":"recorridos automatizados","textChars":24,"textLines":1,"bbox":[102,374,180,32]}
+{"kind":"shape","id":"sh/vm58juxg","slide":9,"bbox":[356,278,228,152]}
+{"kind":"textbox","id":"sh/fa1cjatg","slide":9,"text":"00","textPreview":"00","textChars":2,"textLines":1,"bbox":[378,302,180,58]}
+{"kind":"textbox","id":"sh/u9sba5cb","slide":9,"text":"errores JavaScript","textPreview":"errores JavaScript","textChars":18,"textLines":1,"bbox":[378,374,180,32]}
+{"kind":"shape","id":"sh/hwjulkbm","slide":9,"bbox":[632,278,228,152]}
+{"kind":"textbox","id":"sh/gvatcfu1","slide":9,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[654,302,180,58]}
+{"kind":"textbox","id":"sh/761cfqtk","slide":9,"text":"categorías del curso","textPreview":"categorías del curso","textChars":20,"textLines":1,"bbox":[654,374,180,32]}
+{"kind":"shape","id":"sh/658b6lcz","slide":9,"bbox":[908,278,228,152]}
+{"kind":"textbox","id":"sh/t8juh0bq","slide":9,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[930,302,180,58]}
+{"kind":"textbox","id":"sh/s7at8vu5","slide":9,"text":"temas visuales","textPreview":"temas visuales","textChars":14,"textLines":1,"bbox":[930,374,180,32]}
+{"kind":"shape","id":"sh/r2lcruto","slide":9,"bbox":[80,492,1040,80]}
+{"kind":"textbox","id":"sh/q1cbipc3","slide":9,"text":"Pendiente académico","textPreview":"Pendiente académico","textChars":19,"textLines":1,"bbox":[112,512,220,24]}
+{"kind":"textbox","id":"sh/mxgfqtwb","slide":9,"text":"Aplicar el guion a 5 estudiantes, registrar tiempos y errores y actualizar los hallazgos.","textPreview":"Aplicar el guion a 5 estudiantes, registrar tiempos y errores y actualizar los hallazgos.","textChars":89,"textLines":1,"bbox":[360,512,700,32]}
+{"kind":"notes","id":"nt/63ts58","slide":9,"text":"Distinguir claramente prueba automatizada de prueba de usabilidad.\nMostrar la hoja de observación y pedir que los resultados reales se agreguen antes de la entrega.\n\n[Sources]\n- Prueba ejecutada: tests/ui-smoke.mjs\n- Instrumento pendiente: evidencias/dcu/06-instrumento-prueba-usuarios.md\n- Plantilla pendiente: evidencias/dcu/07-plantilla-resultados.md"}
+{"kind":"slide","id":"sl/zseir6","slide":10,"title":"CIERRE","textShapes":5}
+{"kind":"textbox","id":"sh/50rmhwru","slide":10,"text":"CIERRE","textPreview":"CIERRE","textChars":6,"textLines":1,"bbox":[72,70,220,24]}
+{"kind":"textbox","id":"sh/ix0361sj","slide":10,"text":"Una bitácora que se entiende\nantes de explicarse.","textPreview":"Una bitácora que se entiende | antes de explicarse.","textChars":49,"textLines":2,"bbox":[72,170,750,150]}
+{"kind":"textbox","id":"sh/jy94fm9o","slide":10,"text":"La solución entrega un sistema funcional, evidencia del proceso y una siguiente iteración concreta: validar con estudiantes.","textPreview":"La solución entrega un sistema funcional, evidencia del proceso y una siguiente iteración concreta: validar con estudiantes.","textChars":124,"textLines":1,"bbox":[76,370,650,76]}
+{"kind":"shape","id":"sh/wvyl4rad","slide":10,"bbox":[850,176,250,250]}
+{"kind":"textbox","id":"sh/xwrmdwry","slide":10,"text":"registrar\n→ encontrar\n→ revisar","textPreview":"registrar | → encontrar | → revisar","textChars":31,"textLines":3,"bbox":[880,244,190,92]}
+{"kind":"textbox","id":"sh/atg32hs7","slide":10,"text":"Preguntas","textPreview":"Preguntas","textChars":9,"textLines":1,"bbox":[76,615,300,28]}
+{"kind":"notes","id":"nt/zseir6","slide":10,"text":"Cerrar retomando el problema inicial: la bitácora reduce dispersión y hace visible el avance.\nMencionar como siguiente paso la prueba con participantes y los resultados que deben incorporarse.\n\n[Sources]\n- Documento del curso: PROYECTO FINAL DEL CURSO HCI.pdf\n- Informe del proyecto: docs/Informe_Proyecto_Bitacora_HCI.docx"}

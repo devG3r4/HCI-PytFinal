@@ -1,0 +1,961 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/j3ia8r",
+    "id": "j3ia8r",
+    "slide": 5,
+    "layoutId": "cc480d31-7448-4d1f-940d-e8ca5d253c84",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "46a4c2b8-6d0f-4a97-935d-efbaf57cc1a7",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#F8FAFC",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "cc480d31-7448-4d1f-940d-e8ca5d253c84",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "46a4c2b8-6d0f-4a97-935d-efbaf57cc1a7",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "46a4c2b8-6d0f-4a97-935d-efbaf57cc1a7",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ny583u9s",
+      "id": "1",
+      "bbox": [
+        52,
+        24,
+        380,
+        22
+      ],
+      "geometry": "rect",
+      "text": "BITÁCORA DIGITAL · PROYECTO HCI",
+      "textPreview": "BITÁCORA DIGITAL · PROYECTO HCI",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#566170",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "BITÁCORA DIGITAL · PROYECTO HCI"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "BITÁCORA DIGITAL · PROYECTO HCI",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#566170",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "BITÁCORA DIGITAL · PROYECTO HCI",
+              "fontSize": 12,
+              "color": "#566170",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/oje9czqd",
+      "id": "2",
+      "bbox": [
+        1170,
+        24,
+        54,
+        22
+      ],
+      "geometry": "rect",
+      "text": "05",
+      "textPreview": "05",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#566170",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "05"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "05",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#566170",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "05",
+              "fontSize": 12,
+              "color": "#566170",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9knq54ry",
+      "id": "3",
+      "bbox": [
+        52,
+        62,
+        500,
+        20
+      ],
+      "geometry": "rect",
+      "text": "ARQUITECTURA",
+      "textPreview": "ARQUITECTURA",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "fontSize": 11,
+        "typeface": "+mn-lt",
+        "color": "#2E74B5",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ARQUITECTURA"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ARQUITECTURA",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "color": "#2E74B5",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ARQUITECTURA",
+              "fontSize": 11,
+              "color": "#2E74B5",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/etc76p8b",
+      "id": "4",
+      "bbox": [
+        52,
+        98,
+        900,
+        72
+      ],
+      "geometry": "rect",
+      "text": "La navegación sigue el trabajo del estudiante",
+      "textPreview": "La navegación sigue el trabajo del estudiante",
+      "resolvedFontSize": 38,
+      "resolvedTextStyle": {
+        "fontSize": 38,
+        "typeface": "+mn-lt",
+        "color": "#0B2545",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "La navegación sigue el trabajo del estudiante"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "La navegación sigue el trabajo del estudiante",
+          "resolvedTextStyle": {
+            "fontSize": 38,
+            "color": "#0B2545",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "La navegación sigue el trabajo del estudiante",
+              "fontSize": 38,
+              "color": "#0B2545",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zul8za9w",
+      "id": "5",
+      "bbox": [
+        54,
+        176,
+        870,
+        44
+      ],
+      "geometry": "rect",
+      "text": "Primero iniciar, después encontrar y por último revisar.",
+      "textPreview": "Primero iniciar, después encontrar y por último revisar.",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "color": "#566170",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Primero iniciar, después encontrar y por último revisar."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Primero iniciar, después encontrar y por último revisar.",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#566170"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Primero iniciar, después encontrar y por último revisar.",
+              "fontSize": 20,
+              "color": "#566170"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0vup8fqh",
+      "id": "6",
+      "bbox": [
+        72,
+        270,
+        260,
+        210
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#0B2545",
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1w3q1kr2",
+      "id": "7",
+      "bbox": [
+        100,
+        300,
+        120,
+        22
+      ],
+      "geometry": "rect",
+      "text": "RESUMEN",
+      "textPreview": "RESUMEN",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#D9FF43",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "RESUMEN"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "RESUMEN",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#D9FF43",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "RESUMEN",
+              "fontSize": 14,
+              "color": "#D9FF43",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ypgri98f",
+      "id": "8",
+      "bbox": [
+        100,
+        352,
+        180,
+        72
+      ],
+      "geometry": "rect",
+      "text": "¿Por dónde\nempiezo?",
+      "textPreview": "¿Por dónde | empiezo?",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "¿Por"
+          },
+          {
+            "index": 2,
+            "text": "dónde"
+          },
+          {
+            "index": 3,
+            "text": "empiezo?"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "¿Por dónde",
+          "resolvedTextStyle": {
+            "fontSize": 29,
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "¿Por dónde",
+              "fontSize": 29,
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "empiezo?",
+          "resolvedTextStyle": {
+            "fontSize": 29,
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "empiezo?",
+              "fontSize": 29,
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jqp8be90",
+      "id": "9",
+      "bbox": [
+        480,
+        270,
+        260,
+        210
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#E8EEF5",
+      "lineColor": "#CBD5E1",
+      "lineWidth": 1
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jmlsby90",
+      "id": "10",
+      "bbox": [
+        508,
+        300,
+        120,
+        22
+      ],
+      "geometry": "rect",
+      "text": "ARCHIVOS",
+      "textPreview": "ARCHIVOS",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#2E74B5",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ARCHIVOS"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ARCHIVOS",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#2E74B5",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ARCHIVOS",
+              "fontSize": 14,
+              "color": "#2E74B5",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ilcbitsf",
+      "id": "11",
+      "bbox": [
+        508,
+        352,
+        180,
+        72
+      ],
+      "geometry": "rect",
+      "text": "¿Dónde está\ny qué hago?",
+      "textPreview": "¿Dónde está | y qué hago?",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "color": "#0B2545",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "¿Dónde"
+          },
+          {
+            "index": 2,
+            "text": "está"
+          },
+          {
+            "index": 3,
+            "text": "y qué"
+          },
+          {
+            "index": 4,
+            "text": "hago?"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "¿Dónde está",
+          "resolvedTextStyle": {
+            "fontSize": 29,
+            "color": "#0B2545",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "¿Dónde está",
+              "fontSize": 29,
+              "color": "#0B2545",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "y qué hago?",
+          "resolvedTextStyle": {
+            "fontSize": 29,
+            "color": "#0B2545",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "y qué hago?",
+              "fontSize": 29,
+              "color": "#0B2545",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/58nad8r6",
+      "id": "12",
+      "bbox": [
+        888,
+        270,
+        260,
+        210
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#F1F7E2",
+      "lineColor": "#D6E5A2",
+      "lineWidth": 1
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/k7etk3al",
+      "id": "13",
+      "bbox": [
+        916,
+        300,
+        160,
+        22
+      ],
+      "geometry": "rect",
+      "text": "EVALUACIÓN",
+      "textPreview": "EVALUACIÓN",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#2E74B5",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "EVALUACIÓN"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "EVALUACIÓN",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#2E74B5",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "EVALUACIÓN",
+              "fontSize": 14,
+              "color": "#2E74B5",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7a5sfi9w",
+      "id": "14",
+      "bbox": [
+        916,
+        352,
+        180,
+        72
+      ],
+      "geometry": "rect",
+      "text": "¿Qué debo\nrevisar?",
+      "textPreview": "¿Qué debo | revisar?",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "color": "#0B2545",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "¿Qué debo"
+          },
+          {
+            "index": 2,
+            "text": "revisar?"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "¿Qué debo",
+          "resolvedTextStyle": {
+            "fontSize": 29,
+            "color": "#0B2545",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "¿Qué debo",
+              "fontSize": 29,
+              "color": "#0B2545",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "revisar?",
+          "resolvedTextStyle": {
+            "fontSize": 29,
+            "color": "#0B2545",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "revisar?",
+              "fontSize": 29,
+              "color": "#0B2545",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/69wbmdsb",
+      "id": "15",
+      "bbox": [
+        332,
+        376,
+        148,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#3D8DFF",
+      "lineWidth": 3
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tcnah8r2",
+      "id": "16",
+      "bbox": [
+        740,
+        376,
+        148,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#3D8DFF",
+      "lineWidth": 3
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sbetonah",
+      "id": "17",
+      "bbox": [
+        244,
+        548,
+        800,
+        28
+      ],
+      "geometry": "rect",
+      "text": "Categorías compartidas: Talleres · Laboratorios · Parciales · Proyectos",
+      "textPreview": "Categorías compartidas: Talleres · Laboratorios · Parciales · Proyectos",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#0B2545",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Categorías compartidas: Talleres · Laboratorios · Parciales · Proyectos"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Categorías compartidas: Talleres · Laboratorios · Parciales · Proyectos",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#0B2545",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Categorías compartidas: Talleres · Laboratorios · Parciales · Proyectos",
+              "fontSize": 18,
+              "color": "#0B2545",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

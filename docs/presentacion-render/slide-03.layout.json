@@ -1,0 +1,957 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/28r6aa",
+    "id": "28r6aa",
+    "slide": 3,
+    "layoutId": "cc480d31-7448-4d1f-940d-e8ca5d253c84",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "46a4c2b8-6d0f-4a97-935d-efbaf57cc1a7",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#F8FAFC",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "cc480d31-7448-4d1f-940d-e8ca5d253c84",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "46a4c2b8-6d0f-4a97-935d-efbaf57cc1a7",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "46a4c2b8-6d0f-4a97-935d-efbaf57cc1a7",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qxcbq98v",
+      "id": "1",
+      "bbox": [
+        52,
+        24,
+        380,
+        22
+      ],
+      "geometry": "rect",
+      "text": "BITÁCORA DIGITAL · PROYECTO HCI",
+      "textPreview": "BITÁCORA DIGITAL · PROYECTO HCI",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#566170",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "BITÁCORA DIGITAL · PROYECTO HCI"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "BITÁCORA DIGITAL · PROYECTO HCI",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#566170",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "BITÁCORA DIGITAL · PROYECTO HCI",
+              "fontSize": 12,
+              "color": "#566170",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d03u1orm",
+      "id": "2",
+      "bbox": [
+        1170,
+        24,
+        54,
+        22
+      ],
+      "geometry": "rect",
+      "text": "03",
+      "textPreview": "03",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#566170",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "03",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#566170",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "03",
+              "fontSize": 12,
+              "color": "#566170",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/szutsjq1",
+      "id": "3",
+      "bbox": [
+        52,
+        62,
+        500,
+        20
+      ],
+      "geometry": "rect",
+      "text": "USUARIO",
+      "textPreview": "USUARIO",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "fontSize": 11,
+        "typeface": "+mn-lt",
+        "color": "#2E74B5",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "USUARIO"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "USUARIO",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "color": "#2E74B5",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "USUARIO",
+              "fontSize": 11,
+              "color": "#2E74B5",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/f2lc3yps",
+      "id": "4",
+      "bbox": [
+        52,
+        98,
+        900,
+        72
+      ],
+      "geometry": "rect",
+      "text": "El estudiante necesita recuperar el control",
+      "textPreview": "El estudiante necesita recuperar el control",
+      "resolvedFontSize": 38,
+      "resolvedTextStyle": {
+        "fontSize": 38,
+        "typeface": "+mn-lt",
+        "color": "#0B2545",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "El estudiante necesita recuperar el control"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "El estudiante necesita recuperar el control",
+          "resolvedTextStyle": {
+            "fontSize": 38,
+            "color": "#0B2545",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "El estudiante necesita recuperar el control",
+              "fontSize": 38,
+              "color": "#0B2545",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e1cbut87",
+      "id": "5",
+      "bbox": [
+        54,
+        176,
+        870,
+        44
+      ],
+      "geometry": "rect",
+      "text": "Alex es una proto-persona: una hipótesis explícita que debemos validar con estudiantes reales.",
+      "textPreview": "Alex es una proto-persona: una hipótesis explícita que debemos validar con estudiantes reales.",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "color": "#566170",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Alex es una proto-persona: una hipótesis explícita que debemos validar con estudiantes reales."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Alex es una proto-persona: una hipótesis explícita que debemos validar con estudiantes reales.",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#566170"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Alex es una proto-persona: una hipótesis explícita que debemos validar con estudiantes reales.",
+              "fontSize": 20,
+              "color": "#566170"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/14nu587i",
+      "id": "6",
+      "bbox": [
+        70,
+        258,
+        350,
+        285
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#0B2545",
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/03etw3qd",
+      "id": "7",
+      "bbox": [
+        100,
+        292,
+        84,
+        84
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#D9FF43",
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nq5c7ypo",
+      "id": "8",
+      "bbox": [
+        126,
+        310,
+        34,
+        40
+      ],
+      "geometry": "rect",
+      "text": "A",
+      "textPreview": "A",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "+mn-lt",
+        "color": "#0B2545",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "A"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "A",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "color": "#0B2545",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "A",
+              "fontSize": 34,
+              "color": "#0B2545",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2pwbyt83",
+      "id": "9",
+      "bbox": [
+        100,
+        412,
+        250,
+        28
+      ],
+      "geometry": "rect",
+      "text": "Alex · estudiante universitario",
+      "textPreview": "Alex · estudiante universitario",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Alex · estudiante"
+          },
+          {
+            "index": 2,
+            "text": "universitario"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Alex · estudiante universitario",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Alex · estudiante universitario",
+              "fontSize": 20,
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kjalsvy1",
+      "id": "10",
+      "bbox": [
+        100,
+        456,
+        260,
+        58
+      ],
+      "geometry": "rect",
+      "text": "Trabaja con entregas repartidas entre su computadora, la nube y el chat del grupo.",
+      "textPreview": "Trabaja con entregas repartidas entre su computadora, la nube y el chat del grupo.",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#C9D1DC",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Trabaja con entregas repartidas"
+          },
+          {
+            "index": 2,
+            "text": "entre su computadora, la nube y"
+          },
+          {
+            "index": 3,
+            "text": "el chat del grupo."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Trabaja con entregas repartidas entre su computadora, la nube y el chat del grupo.",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#C9D1DC"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Trabaja con entregas repartidas entre su computadora, la nube y el chat del grupo.",
+              "fontSize": 16,
+              "color": "#C9D1DC"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lkj2l0fm",
+      "id": "11",
+      "bbox": [
+        506,
+        258,
+        300,
+        285
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#CBD5E1",
+      "lineWidth": 1
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yh83qlgv",
+      "id": "12",
+      "bbox": [
+        538,
+        292,
+        180,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Necesita",
+      "textPreview": "Necesita",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#2E74B5",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Necesita"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Necesita",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#2E74B5",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Necesita",
+              "fontSize": 17,
+              "color": "#2E74B5",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zi1kjqxg",
+      "id": "13",
+      "bbox": [
+        538,
+        338,
+        210,
+        120
+      ],
+      "geometry": "rect",
+      "text": "• nombres claros\n• categorías visibles\n• búsqueda rápida\n• feedback de guardado",
+      "textPreview": "• nombres claros | • categorías visibles | • búsqueda rápida | • feedback de guardado",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "color": "#0B2545",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": "• nombres claros"
+          },
+          {
+            "index": 2,
+            "text": "• categorías visibles"
+          },
+          {
+            "index": 3,
+            "text": "• búsqueda rápida"
+          },
+          {
+            "index": 4,
+            "text": "• feedback de"
+          },
+          {
+            "index": 5,
+            "text": "guardado"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "• nombres claros",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#0B2545"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "• nombres claros",
+              "fontSize": 20,
+              "color": "#0B2545"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "• categorías visibles",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#0B2545"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "• categorías visibles",
+              "fontSize": 20,
+              "color": "#0B2545"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "• búsqueda rápida",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#0B2545"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "• búsqueda rápida",
+              "fontSize": 20,
+              "color": "#0B2545"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "• feedback de guardado",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#0B2545"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "• feedback de guardado",
+              "fontSize": 20,
+              "color": "#0B2545"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8nalwfyd",
+      "id": "14",
+      "bbox": [
+        892,
+        258,
+        300,
+        285
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#F1F7E2",
+      "lineColor": "#D6E5A2",
+      "lineWidth": 1
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9oj2pkfi",
+      "id": "15",
+      "bbox": [
+        924,
+        292,
+        220,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Pregunta de diseño",
+      "textPreview": "Pregunta de diseño",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#2E74B5",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Pregunta de diseño"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Pregunta de diseño",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#2E74B5",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Pregunta de diseño",
+              "fontSize": 17,
+              "color": "#2E74B5",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mls3u5g7",
+      "id": "16",
+      "bbox": [
+        924,
+        342,
+        220,
+        124
+      ],
+      "geometry": "rect",
+      "text": "¿Puede registrar y volver a encontrar una evidencia sin aprender una estructura complicada?",
+      "textPreview": "¿Puede registrar y volver a encontrar una evidencia sin aprender una estructura complicada?",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "color": "#0B2545",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 6,
+        "lines": [
+          {
+            "index": 1,
+            "text": "¿Puede registrar y"
+          },
+          {
+            "index": 2,
+            "text": "volver a encontrar"
+          },
+          {
+            "index": 3,
+            "text": "una evidencia sin"
+          },
+          {
+            "index": 4,
+            "text": "aprender una"
+          },
+          {
+            "index": 5,
+            "text": "estructura"
+          },
+          {
+            "index": 6,
+            "text": "complicada?"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "¿Puede registrar y volver a encontrar una evidencia sin aprender una estructura complicada?",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#0B2545",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "¿Puede registrar y volver a encontrar una evidencia sin aprender una estructura complicada?",
+              "fontSize": 20,
+              "color": "#0B2545",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}
