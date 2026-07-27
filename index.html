@@ -152,7 +152,7 @@
           <span class="field-error" id="error-unit" role="alert"></span>
         </div>
 
-        <!-- NUEVO: Campo para adjuntar archivo -->
+        <!-- Campo para adjuntar archivo -->
         <div class="form-group">
           <label for="input-file">Archivo adjunto (PDF, Imagen)</label>
           <input type="file" id="input-file" accept=".pdf, .png, .jpg, .jpeg" />
@@ -168,24 +168,26 @@
     </div>
   </div>
 
-  <!-- ===== MODAL DE CONFIRMACIÓN DE BORRADO (Prevención de errores) ===== -->
+  <!-- ===== MODAL DE CONFIRMACIÓN DE BORRADO ===== -->
   <div class="modal-overlay hidden" id="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
     <div class="modal-box">
       <h3 id="confirm-title">⚠️ Confirmar eliminación</h3>
       <p id="confirm-message">Vas a eliminar esta evidencia de forma permanente. Esta acción no se puede deshacer.</p>
       <div class="modal-actions">
         <button class="btn btn-secondary" id="btn-modal-cancel">Cancelar</button>
-        <!-- Rojo semántico para acción destructiva -->
         <button class="btn btn-danger" id="btn-modal-confirm">Sí, eliminar</button>
       </div>
     </div>
   </div>
 
-  <!-- ===== CONTENEDOR DE TOASTS (Retroalimentación / visibilidad) ===== -->
+  <!-- ===== CONTENEDOR DE TOASTS ===== -->
   <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- SDKs de Firebase (Compatibilidad v9) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 
   <script src="app.js"></script>
 </body>
 
 </html>
-c:\Users\Administrator\AppData\Local\Packages\MicrosoftWindows.Client.Core_cw5n1h2txyewy\TempState\ScreenClip\{CC59D19F-9244-404C-A9F6-E262FF8228ED}.png

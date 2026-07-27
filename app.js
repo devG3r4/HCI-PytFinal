@@ -1,13 +1,26 @@
 /* ==========================================================
-   Bitácora Digital — Lógica de la aplicación (modular)
+   Bitácora Digital — Lógica de la aplicación (Firebase)
    Estado + CRUD + navegación entre módulos.
-   Persistencia exacta y consistente en LocalStorage.
+   Sincronización en tiempo real y almacenamiento en la nube.
    ========================================================== */
 
 (() => {
   "use strict";
 
-  const STORAGE_KEY = "bitacora_evidencias_v2";
+  // ---------- Configuración de Firebase ----------
+  const firebaseConfig = {
+    apiKey: "AIzaSyBi_v2l11vhBt1mhCfFc12jMlkhGaEIYYc",
+    authDomain: "portafolio-hci.firebaseapp.com",
+    databaseURL: "https://portafolio-hci-default-rtdb.firebaseio.com",
+    projectId: "portafolio-hci",
+    storageBucket: "portafolio-hci.firebasestorage.app",
+    messagingSenderId: "703227404068",
+    appId: "1:703227404068:web:58f25326fecf9aa69e9db1",
+    measurementId: "G-KT5R8J3G8E"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
 
   // ---------- Configuración de Cloudinary (subida no firmada) ----------
   const CLOUD_NAME = "aeyvrrn4";
@@ -18,7 +31,7 @@
   const UNIT_CLASS = { "Unidad 1": "u1", "Unidad 2": "u2", "Unidad 3": "u3" };
 
   // ---------- Estado ----------
-  let evidences = loadEvidences();
+  let evidences = []; // Ahora se alimenta dinámicamente desde Firebase
   let currentFilter = "Todas";
   let editingId = null;
   let pendingDeleteId = null;
@@ -51,26 +64,29 @@
   const toastContainer = $("toast-container");
 
   // ==========================================================
-  //  PERSISTENCIA (LocalStorage)
+  //  SINCRONIZACIÓN EN TIEMPO REAL (Firebase)
   // ==========================================================
-  function loadEvidences() {
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      return raw ? JSON.parse(raw) : [];
-    } catch {
-      return [];
-    }
-  }
+  db.ref("evidencias").on("value", (snapshot) => {
+    const data = snapshot.val();
+    evidences = [];
 
-  function saveEvidences() {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(evidences));
-  }
+    if (data) {
+      Object.keys(data).forEach((key) => {
+        evidences.push({
+          id: key,
+          ...data[key]
+        });
+      });
+
+      // Ordenar por fecha de creación (más recientes primero)
+      evidences.sort((a, b) => new Date(b.rawDate || 0) - new Date(a.rawDate || 0));
+    }
+
+    refreshCurrentView();
+  });
 
   // ==========================================================
   //  ARCHIVOS ADJUNTOS (Cloudinary)
-  //  Se sube el archivo a Cloudinary y solo la URL resultante
-  //  se guarda en localStorage junto con la evidencia, evitando
-  //  el límite de tamaño de localStorage.
   // ==========================================================
   async function subirArchivoCloudinary(file) {
     const formData = new FormData();
@@ -128,7 +144,7 @@
     const counts = countByUnit();
     const total = evidences.length;
 
-    // --- Tarjetas de métricas (proximidad: cada dato en su tarjeta) ---
+    // --- Tarjetas de métricas ---
     const statsGrid = $("stats-grid");
     statsGrid.innerHTML = "";
 
@@ -151,7 +167,7 @@
         }
       });
     }
-    alerts.appendChild(alertRow("info", "💾", "Los datos se guardan automáticamente en este navegador (LocalStorage)."));
+    alerts.appendChild(alertRow("info", "☁️", "Sincronización en vivo activada: los datos se guardan de forma segura en la nube (Firebase)."));
 
     // --- Barras de distribución ---
     const bars = $("distribution-bars");
@@ -211,7 +227,6 @@
   function createCard(evidence) {
     const cls = UNIT_CLASS[evidence.unit] || "u1";
 
-    // Proximidad: todo el contenido de la evidencia dentro de una tarjeta
     const card = document.createElement("article");
     card.className = "evidence-card";
 
@@ -243,17 +258,16 @@
       card.appendChild(fileLink);
     }
 
-    // Proximidad: acciones agrupadas al pie de la misma tarjeta
     const actions = document.createElement("div");
     actions.className = "card-actions";
 
     const btnEdit = document.createElement("button");
-    btnEdit.className = "btn btn-primary btn-sm";   // Semejanza: afirmativa = primario
+    btnEdit.className = "btn btn-primary btn-sm";
     btnEdit.textContent = "✏️ Editar";
     btnEdit.addEventListener("click", () => openForm(evidence.id));
 
     const btnDelete = document.createElement("button");
-    btnDelete.className = "btn btn-danger btn-sm";  // Color semántico: destructiva = rojo
+    btnDelete.className = "btn btn-danger btn-sm";
     btnDelete.textContent = "🗑️ Eliminar";
     btnDelete.addEventListener("click", () => requestDelete(evidence.id));
 
@@ -276,7 +290,6 @@
     }
     empty.classList.add("hidden");
 
-    // Salida organizada y escaneable: agrupada por unidad
     UNITS.forEach((unit) => {
       const items = evidences.filter((e) => e.unit === unit);
       if (items.length === 0) return;
@@ -427,31 +440,33 @@
         data.fileName = name;
       } catch (error) {
         console.error("Error al subir el archivo:", error);
-        showToast("No se pudo subir el archivo. Se guardó el resto de la evidencia.", "danger");
-      } finally {
+        showToast("No se pudo subir el archivo. Reintenta de nuevo.", "danger");
         btnSubmit.disabled = false;
         btnSubmit.textContent = originalBtnText;
+        return;
       }
     }
 
-    if (editingId !== null) {
-      // UPDATE — conserva el archivo previo si no se subió uno nuevo
-      const evidence = evidences.find((e) => e.id === editingId);
-      Object.assign(evidence, data);
-      showToast("Evidencia actualizada con éxito.", "info");
-    } else {
-      // CREATE
-      evidences.unshift({
-        id: Date.now(),
-        ...data,
-        createdAt: formatDate(new Date()),
-      });
-      showToast("Evidencia guardada con éxito.", "success");
+    try {
+      if (editingId !== null) {
+        // UPDATE en Firebase
+        await db.ref(`evidencias/${editingId}`).update(data);
+        showToast("Evidencia actualizada con éxito.", "info");
+      } else {
+        // CREATE en Firebase
+        data.createdAt = formatDate(new Date());
+        data.rawDate = new Date().toISOString();
+        await db.ref("evidencias").push(data);
+        showToast("Evidencia guardada con éxito.", "success");
+      }
+      closeForm();
+    } catch (error) {
+      console.error("Error al guardar en Firebase:", error);
+      showToast("Error al conectar con la base de datos.", "danger");
+    } finally {
+      btnSubmit.disabled = false;
+      btnSubmit.textContent = originalBtnText;
     }
-
-    saveEvidences();
-    closeForm();
-    refreshCurrentView();
   }
 
   function formatDate(d) {
@@ -459,7 +474,7 @@
   }
 
   // ==========================================================
-  //  ELIMINAR — con modal de confirmación (prevención de errores)
+  //  ELIMINAR — con modal de confirmación
   // ==========================================================
   function requestDelete(id) {
     pendingDeleteId = id;
@@ -467,14 +482,19 @@
     $("btn-modal-cancel").focus(); // foco en la opción segura
   }
 
-  function confirmDelete() {
+  async function confirmDelete() {
     if (pendingDeleteId === null) return;
-    evidences = evidences.filter((e) => e.id !== pendingDeleteId);
-    pendingDeleteId = null;
-    saveEvidences();
-    closeConfirm();
-    refreshCurrentView();
-    showToast("Evidencia eliminada.", "danger");
+
+    try {
+      // DELETE en Firebase
+      await db.ref(`evidencias/${pendingDeleteId}`).remove();
+      showToast("Evidencia eliminada exitosamente.", "danger");
+    } catch (error) {
+      console.error("Error al eliminar en Firebase:", error);
+      showToast("No se pudo eliminar la evidencia.", "danger");
+    } finally {
+      closeConfirm();
+    }
   }
 
   function closeConfirm() {
@@ -514,7 +534,7 @@
 
   menuToggle.addEventListener("click", () => sidebar.classList.toggle("open"));
 
-  // Cerrar modales con clic fuera o Escape (control y libertad del usuario)
+  // Cerrar modales con clic fuera o Escape
   formModal.addEventListener("click", (e) => { if (e.target === formModal) closeForm(); });
   confirmModal.addEventListener("click", (e) => { if (e.target === confirmModal) closeConfirm(); });
   document.addEventListener("keydown", (e) => {
@@ -522,19 +542,6 @@
     if (!confirmModal.classList.contains("hidden")) closeConfirm();
     else if (!formModal.classList.contains("hidden")) closeForm();
   });
-
-  // ==========================================================
-  //  DATOS DE EJEMPLO — solo en el primer uso
-  // ==========================================================
-  if (localStorage.getItem(STORAGE_KEY) === null) {
-    evidences = [
-      { id: 1, title: "Mapa conceptual de heurísticas de Nielsen", description: "Resumen de las 10 heurísticas de usabilidad con ejemplos en apps móviles.", unit: "Unidad 1", createdAt: "01 jul. 2026" },
-      { id: 2, title: "Informe de Card Sorting", description: "Resultados de la sesión de card sorting abierto con 8 participantes.", unit: "Unidad 2", createdAt: "03 jul. 2026" },
-      { id: 3, title: "Prototipo de baja fidelidad", description: "Wireframes en papel de la pantalla principal con anotaciones de feedback.", unit: "Unidad 3", createdAt: "05 jul. 2026" },
-      { id: 4, title: "Test de usabilidad moderado", description: "Guion y hallazgos de 5 pruebas con usuarios sobre el flujo de registro.", unit: "Unidad 1", createdAt: "06 jul. 2026" },
-    ];
-    saveEvidences();
-  }
 
   // ==========================================================
   //  ARRANQUE
