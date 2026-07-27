@@ -628,6 +628,20 @@ button:disabled { cursor: not-allowed; }
 .field-error { display: block; min-height: 15px; margin-top: 4px; color: var(--danger); font-size: .68rem; }
 .file-hint { display: block; min-height: 16px; margin-top: 6px; color: var(--muted); font-size: .68rem; }
 .modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 24px; }
+.modal-intro { margin: 0 0 16px; color: var(--muted); font-size: .78rem; line-height: 1.55; }
+.help-box, .onedrive-box { width: min(560px, calc(100vw - 32px)); }
+.help-steps { display: grid; gap: 12px; margin: 4px 0 20px; padding: 0; list-style: none; counter-reset: help-step; }
+.help-steps li { display: grid; grid-template-columns: 34px 1fr; column-gap: 10px; padding: 12px; background: var(--surface-2); border: 1px solid var(--line-soft); border-radius: 12px; counter-increment: help-step; }
+.help-steps li::before { content: counter(help-step); display: grid; place-items: center; width: 28px; height: 28px; color: var(--accent-contrast); background: var(--accent); border-radius: 50%; font-size: .72rem; font-weight: 800; grid-row: 1 / span 2; }
+.help-steps strong { color: var(--text); font-size: .8rem; }
+.help-steps span { color: var(--muted); font-size: .72rem; line-height: 1.45; }
+.onedrive-list { display: grid; gap: 8px; max-height: 340px; overflow-y: auto; padding-right: 4px; }
+.onedrive-file { display: flex; align-items: center; gap: 11px; width: 100%; padding: 11px 12px; color: var(--text); text-align: left; background: var(--surface-2); border: 1px solid var(--line-soft); border-radius: 11px; }
+.onedrive-file:hover, .onedrive-file:focus-visible { background: var(--surface-3); border-color: var(--blue); }
+.onedrive-file-icon { display: grid; place-items: center; width: 32px; height: 32px; background: rgba(0, 120, 212, .12); border-radius: 8px; }
+.onedrive-file strong, .onedrive-file small { display: block; }
+.onedrive-file strong { overflow: hidden; color: var(--text); font-size: .75rem; text-overflow: ellipsis; white-space: nowrap; }
+.onedrive-file small { margin-top: 3px; color: var(--muted); font-size: .66rem; }
 .confirm-box { width: min(100%, 390px); text-align: center; }
 .confirm-icon { display: grid; place-items: center; width: 44px; height: 44px; margin: 0 auto 15px; color: var(--danger); background: var(--danger-soft); border-radius: 14px; }
 .confirm-box h3 { margin: 0 0 7px; font-size: 1.1rem; }
@@ -663,6 +677,7 @@ button:disabled { cursor: not-allowed; }
 .legacy-light-theme .quick-action-icon { border-radius: 2px; }
 .legacy-light-theme .quick-action-icon.onedrive-icon { color: #0078d4; }
 .legacy-light-theme .quick-action strong { color: var(--text); }
+.legacy-light-theme .help-steps li, .legacy-light-theme .onedrive-file { background: #f7faff; }
 .legacy-light-theme .stat-card { background: #f7faff; border-radius: 2px; }
 .legacy-light-theme .file-toolbar { background: #f1f6fb; border-color: var(--line); }
 .legacy-light-theme .filter-btn.active { color: #fff; background: var(--blue-strong); border-color: var(--blue-strong); border-radius: 2px; }
