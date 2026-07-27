@@ -106,8 +106,12 @@
       Object.keys(data).forEach((key) => {
         evidences.push({ id: key, ...data[key] });
       });
-      // Ordenar por más recientes primero
-      evidences.sort((a, b) => b.id - a.id);
+      // Ordenar por ID (que ahora son timestamps o strings)
+      evidences.sort((a, b) => {
+        const idA = isNaN(a.id) ? 0 : Number(a.id);
+        const idB = isNaN(b.id) ? 0 : Number(b.id);
+        return idB - idA;
+      });
     }
     refreshCurrentView();
   });
